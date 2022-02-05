@@ -1,9 +1,12 @@
+import { Product } from "./sections/product/Product";
+import { Spacer } from "./components";
+
 function App() {
   return (
     <div className="App">
-      <header className="App-header">
-        <h1>Aerolab Coding Challenge</h1>
-      </header>
+      <Spacer />
+      <Product />
+      <Spacer />
     </div>
   );
 }
