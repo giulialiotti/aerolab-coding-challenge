@@ -10,6 +10,8 @@ export const styles = {
       cero: "#FFFFFF",
     },
     brand: {
+      blue: "#176FEB",
+      pink: "#FF80FF",
       light: "#E5F0FF",
       light2: "#CCE1FF",
     },
@@ -35,4 +37,13 @@ export const styles = {
       aerolab: "linear-gradient(180deg, #FF8800 0%, #FF6600 100%)",
     },
   },
+  shadows: {
+    elevationOne: {
+      default: "0px 2px 8px rgba(0, 0, 0, 0.05)",
+      hoverAndActive: "0px 2px 12px rgba(0, 0, 0, 0.08);"
+    },
+    elevationTwo: {
+      default: "0px 2px 40px rgba(0, 0, 0, 0.05);"
+    }
+  }
 };
