@@ -2,9 +2,9 @@ import styled from "styled-components";
 import { styles } from "../styles";
 import { breakpoints } from "../breakpoints";
 
-export const SortButton = ({ selected, children, ...props }) => {
+export const SelectorButton = ({ isNumber, selected, children, ...props }) => {
   return (
-    <StyledButton type="button" selected={selected} {...props}>
+    <StyledButton type="button" isNumber={isNumber} selected={selected} {...props}>
       {children}
     </StyledButton>
   );
@@ -24,7 +24,7 @@ const StyledButton = styled.button`
   font-size: 16px;
   font-weight: 600;
   line-height: 150%;
-  padding: 8px 24px;
+  padding: ${(props) => (props.isNumber ? '4px 19.6px' : '8px 24px' )};
   position: relative;
 
   &:after {

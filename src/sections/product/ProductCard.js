@@ -21,7 +21,7 @@ export const ProductCard = ({ product: { name, category, img, cost } }) => {
           <TextL2AllCaps color={colors.neutrals.six}>{category}</TextL2AllCaps>
         </DetailWrapper>
       </Card>
-      <Button cost={cost} />
+      <Button product text={cost} />
     </Wrapper>
   );
 };

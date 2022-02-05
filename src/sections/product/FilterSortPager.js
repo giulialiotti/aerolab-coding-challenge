@@ -2,7 +2,7 @@ import styled from "styled-components";
 import { typographys } from "../../typographys";
 import { styles } from "../../styles";
 
-import { SortButton } from "../../components";
+import { SelectorButton } from "../../components";
 
 const { TextL1 } = typographys;
 
@@ -33,12 +33,12 @@ export const FilterSortPager = ({ buttonsState }) => {
         >
           Lowest Price
         </StyledButton>
-        <SortButton
+        <SelectorButton
           selected={sortButtons.highestPrice}
           onClick={() => handleClick(false, false, true)}
         >
           Highest Price
-        </SortButton>
+        </SelectorButton>
       </SortWrapper>
     </Wrapper>
   );
@@ -57,6 +57,6 @@ const SortTitle = styled(TextL1)`
   margin-right: 16px;
 `;
 
-const StyledButton = styled(SortButton)`
+const StyledButton = styled(SelectorButton)`
   margin-right: 12px;
 `;
