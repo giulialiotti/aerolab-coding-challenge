@@ -14,6 +14,7 @@ import walkthrougThreeResonsive from "./illustrations/walkthroug-3-responsive.pn
 import aerolabIcon from "./icons/aerolab-icon.svg";
 import aerolabWhite from "./icons/aerolab-white-icon.svg";
 import aerolabGray from "./icons/aerolab-gray-icon.svg";
+import aerolabNeutralOne from "./icons/aerolab-neutral-100-icon.svg";
 import arrowDownIcon from "./icons/arrow-down-icon.svg";
 import arrowNextIcon from "./icons/arrow-next-icon.svg";
 import browseIcon from "./icons/browse-icon.svg";
@@ -46,6 +47,7 @@ export const icons = {
   aerolabIcon,
   aerolabWhite,
   aerolabGray,
+  aerolabNeutralOne,
   arrowDownIcon,
   arrowNextIcon,
   browseIcon,
