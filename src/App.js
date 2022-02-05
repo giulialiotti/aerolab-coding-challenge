@@ -1,4 +1,4 @@
-import { Product } from "./sections/product/Product";
+import { Product, Footer } from "./sections";
 import { Spacer } from "./components";
 
 function App() {
@@ -7,6 +7,7 @@ function App() {
       <Spacer />
       <Product />
       <Spacer />
+      <Footer />
     </div>
   );
 }
