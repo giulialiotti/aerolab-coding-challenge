@@ -6,12 +6,12 @@ import { breakpoints } from "../breakpoints";
 // assets
 import { icons } from "../assets";
 
-export const CTAButton = ({ disabled, cost, ...props }) => {
+export const CTAButton = ({ product, disabled, text, ...props }) => {
   return (
-    <StyledButton type="button" disabled={disabled} {...props}>
-      Redeem for
+    <StyledButton type="button" product={product} disabled={disabled} {...props}>
+      {product && "Redeem for"}
       <Span bgImage={!disabled ? icons.aerolabWhite : icons.aerolabGray} />
-      {cost}
+      {text}
     </StyledButton>
   );
 };
@@ -31,7 +31,7 @@ const StyledButton = styled.button`
   font-size: 16px;
   font-weight: 600;
   line-height: 150%;
-  padding: 16px 24px;
+  padding: ${(props) => props.product ? '16px 24px' : '12px 24px' } ;
   width: 100%;
 
   ${breakpoints.desktop} {
