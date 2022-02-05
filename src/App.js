@@ -1,14 +1,17 @@
-import { Product, Footer } from "./sections";
+import { Navbar, Product, Footer } from "./sections";
 import { Spacer } from "./components";
 
 function App() {
   return (
-    <div className="App">
-      <Spacer />
-      <Product />
-      <Spacer />
+    <>
+      <Navbar />
+      <main>
+        <Spacer />
+        <Product />
+        <Spacer />
+      </main>
       <Footer />
-    </div>
+    </>
   );
 }
 
