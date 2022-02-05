@@ -6,14 +6,39 @@ import { SortButton } from "../../components";
 
 const { TextL1 } = typographys;
 
-export const FilterSortPager = () => {
+export const FilterSortPager = ({ buttonsState }) => {
+  const { sortButtons, setSortButtons } = buttonsState;
+
+  const handleClick = (valueOne, valueTwo, valueThree) => {
+    setSortButtons({
+      mostRecent: valueOne,
+      lowestPrice: valueTwo,
+      highestPrice: valueThree,
+    });
+  };
+
   return (
     <Wrapper>
       <SortWrapper>
         <SortTitle color={styles.colors.neutrals.six}>Sort by:</SortTitle>
-        <StyledButton selected>Most Recent</StyledButton>
-        <StyledButton selected={false}>Lowest Price</StyledButton>
-        <SortButton selected={false}>Highest Price</SortButton>
+        <StyledButton
+          selected={sortButtons.mostRecent}
+          onClick={() => handleClick(true, false, false)}
+        >
+          Most Recent
+        </StyledButton>
+        <StyledButton
+          selected={sortButtons.lowestPrice}
+          onClick={() => handleClick(false, true, false)}
+        >
+          Lowest Price
+        </StyledButton>
+        <SortButton
+          selected={sortButtons.highestPrice}
+          onClick={() => handleClick(false, false, true)}
+        >
+          Highest Price
+        </SortButton>
       </SortWrapper>
     </Wrapper>
   );

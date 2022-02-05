@@ -4,7 +4,7 @@ import { styles } from "../../styles";
 
 import { FilterSortPager } from "./FilterSortPager";
 
-export const TitleAndControls = () => {
+export const TitleAndControls = ({ buttonsState }) => {
   const { TitleL2 } = typographys;
 
   return (
@@ -12,12 +12,12 @@ export const TitleAndControls = () => {
       <TitleL2>
         <SpanBlue>Tech</SpanBlue> Products
       </TitleL2>
-      <FilterSortPager />
+      <FilterSortPager buttonsState={buttonsState} />
     </Wrapper>
   );
 };
 
-const Wrapper = styled.div``
+const Wrapper = styled.div``;
 
 const SpanBlue = styled.span`
   color: ${styles.colors.brand.blue};

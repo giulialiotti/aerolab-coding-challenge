@@ -4,22 +4,10 @@ import React from "react";
 import styled from "styled-components";
 import { breakpoints } from "../../breakpoints";
 
-// functions
-import { getProducts } from "../../functions";
-
 // components
 import { ProductCard } from "./ProductCard";
 
-export const Products = () => {
-  const [products, setProducts] = React.useState([]);
-
-  React.useEffect(() => {
-    getProducts().then((products) => {
-      setProducts(products);
-    });
-  }, []);
-
-  console.log(products);
+export const Products = ({ products }) => {
   return (
     <Wrapper>
       {products?.map((product) => {

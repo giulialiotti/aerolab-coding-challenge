@@ -19,3 +19,8 @@ export async function getProducts() {
     return e;
   }
 }
+
+// Sort array by cost
+export function sortProducts(a, b) {
+  return a.cost - b.cost;
+}
