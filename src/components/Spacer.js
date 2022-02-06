@@ -1,9 +1,9 @@
 import styled from "styled-components";
 
 export const Spacer = () => {
-  return <Wrapper />;
+  return <Wrapper className="spacer" />;
 };
 
 const Wrapper = styled.div`
-  height: 160px;
+  height: ${(props) => props.height || "160px"};
 `;
