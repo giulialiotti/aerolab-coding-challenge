@@ -1,9 +1,11 @@
+import React from "react";
+
+// gsap
+import { ScrollTrigger } from "gsap/ScrollTrigger";
+
 // styles
 import styled from "styled-components";
 import { breakpoints } from "../../breakpoints";
-
-// components
-// import { Section } from "../../components";
 
 // self components
 import { IntroCard } from "./IntroCard";
@@ -12,12 +14,36 @@ import { IntroCard } from "./IntroCard";
 import { illustrations, icons } from "../../assets";
 import { styles } from "../../styles";
 
+// animation
+import { animateWalkthroughCards } from "../../animations";
+
 export const Walkthrough = () => {
+  const cardsWrapperRef = React.useRef(null);
+
+  const cardOneRef = React.useRef(null);
+  const cardThreeRef = React.useRef(null);
+
+  const refs = {
+    cardsWrapperRef,
+    cardOneRef,
+    cardThreeRef,
+  };
+
+  // Cards animation only for desktop breakpoint
+  React.useLayoutEffect(() => {
+    ScrollTrigger.matchMedia({
+      "(min-width: 1920px)": function () {
+        animateWalkthroughCards(refs);
+      },
+    });
+  }, []);
+
   return (
     <Wrapper id="walkthrough">
       <Background />
-      <CardsWrapper>
+      <CardsWrapper ref={cardsWrapperRef}>
         <FirstCard
+          designatedRef={cardOneRef}
           image={illustrations.walkthrougOneDesktop}
           alt=""
           title="1—browse"
@@ -34,6 +60,7 @@ export const Walkthrough = () => {
           iconAlt=""
         />
         <ThirdCard
+          designatedRef={cardThreeRef}
           image={illustrations.walkthrougThreeDesktop}
           alt=""
           title="3—enjoy!"

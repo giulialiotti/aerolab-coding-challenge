@@ -2,6 +2,12 @@ import { UserProvider } from "./context/UserContext";
 import { Navbar, Hero, Product, Walkthrough, Footer } from "./sections";
 import { Spacer } from "./components";
 
+// gsap
+import { gsap } from "gsap";
+import { ScrollTrigger } from "gsap/ScrollTrigger";
+
+gsap.registerPlugin(ScrollTrigger);
+
 function App() {
   return (
     <>
