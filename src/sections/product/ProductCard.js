@@ -2,6 +2,7 @@
 import styled from "styled-components";
 import { typographys } from "../../typographys";
 import { styles } from "../../styles";
+import { breakpoints } from "../../breakpoints";
 
 // components
 import { CTAButton } from "../../components/CTAButton";
