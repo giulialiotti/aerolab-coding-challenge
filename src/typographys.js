@@ -62,7 +62,7 @@ const TextL1AllCaps = styled.p`
   font-size: 16px;
   font-weight: 600;
   line-height: 150%;
-  letter-spacing: 24%;
+  letter-spacing: 0.24em;
   text-transform: uppercase;
   color: ${props => props.color || styles.colors.neutrals.nine};
 
