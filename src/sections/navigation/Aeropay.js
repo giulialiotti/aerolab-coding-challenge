@@ -11,7 +11,26 @@ import { FlexSpaceBetween, SelectorButton, CTAButton } from "../../components";
 
 const { TextL1, TextL2 } = typographys;
 
-export const Aeropay = () => {
+export const Aeropay = ({ userData: { name, createDate } }) => {
+  let date = new Date(createDate);
+  let months = [
+    "01",
+    "02",
+    "03",
+    "04",
+    "05",
+    "06",
+    "07",
+    "08",
+    "09",
+    "10",
+    "11",
+    "12",
+  ];
+  let monthIndex = date.getMonth();
+  let month = months[monthIndex];
+  let year = date.getFullYear().toString().slice(-2);
+
   return (
     <Wrapper>
       <Header>
@@ -26,14 +45,16 @@ export const Aeropay = () => {
             </Icon>
           </FlexSpaceBetween>
           <NumerAndDate>
-            <TextL2 color={styles.colors.neutrals.one}>John Kite</TextL2>
-            <TextL2 color={styles.colors.neutrals.one}>07/23</TextL2>
+            <TextL2 color={styles.colors.neutrals.one}>{name}</TextL2>
+            <TextL2 color={styles.colors.neutrals.one}>{month}/{year}</TextL2>
           </NumerAndDate>
         </AeroCardWrapper>
         <AmountsWrapper>
-            <SelectorButton isNumber>1000</SelectorButton>
-            <SelectorButton selected={true} isNumber>5000</SelectorButton>
-            <SelectorButton isNumber>7500</SelectorButton>
+          <SelectorButton isNumber>1000</SelectorButton>
+          <SelectorButton selected={true} isNumber>
+            5000
+          </SelectorButton>
+          <SelectorButton isNumber>7500</SelectorButton>
         </AmountsWrapper>
         <AddPointsButton text="Add Points" />
       </Content>
@@ -91,4 +112,4 @@ const AmountsWrapper = styled(FlexSpaceBetween)`
 
 const AddPointsButton = styled(CTAButton)`
   margin-top: 24px;
-`
+`;

@@ -11,8 +11,15 @@ import { logos, icons } from "../../assets";
 // self components
 import { Aeropay } from "./Aeropay";
 
+// functions
+import { getData } from "../../functions";
+
+// user endpoint
+const userUrl = "https://coding-challenge-api.aerolab.co/user/me";
+
 export const Navbar = () => {
   const [showAeropay, setShowAeropay] = React.useState(false);
+  const [user, setUser] = React.useState([]);
 
   const arrowRef = React.useRef(null);
 
@@ -28,6 +35,12 @@ export const Navbar = () => {
     }
   };
 
+  React.useEffect(() => {
+    getData(userUrl).then((user) => {
+      setUser(user);
+    });
+  }, []);
+
   return (
     <Wrapper>
       <LogoWrapper>
@@ -37,11 +50,11 @@ export const Navbar = () => {
         <AeroIconWrapper>
           <img src={icons.aerolabIcon} alt="Aerolab icon" />
         </AeroIconWrapper>
-        <CoinAmount>1000</CoinAmount>
+        <CoinAmount>{user.points}</CoinAmount>
         <ArrowWrapper ref={arrowRef} onClick={handleAeropay}>
           <img src={icons.arrowNextIcon} alt="Arrow down icon" />
         </ArrowWrapper>
-        {showAeropay && <Aeropay />}
+        {showAeropay && <Aeropay userData={user} />}
       </AeroCoinsWrapper>
     </Wrapper>
   );
