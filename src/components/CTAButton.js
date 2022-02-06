@@ -25,7 +25,7 @@ const StyledButton = styled.button`
   border-radius: 16px;
   box-shadow: ${styles.shadows.elevationOne.default};
   color: ${(props) =>
-    !props.disabled ? styles.colors.neutrals.one : styles.colors.neutrals.six};
+    !props.disabled ? styles.colors.neutrals.cero : styles.colors.neutrals.six};
   cursor: pointer;
   font-family: "Montserrat", sans-serif;
   font-size: 16px;

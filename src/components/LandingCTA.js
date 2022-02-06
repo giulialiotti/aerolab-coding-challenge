@@ -20,7 +20,7 @@ const Link = styled.a`
   border: none;
   border-radius: 16px;
   box-shadow: ${styles.shadows.elevationOne.default};
-  color: ${styles.colors.neutrals.one};
+  color: ${styles.colors.neutrals.cero};
   cursor: pointer;
   display: block;
   font-family: "Montserrat", sans-serif;
