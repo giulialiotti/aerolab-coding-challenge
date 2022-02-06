@@ -36,10 +36,13 @@ const ImgWrapper = styled.div`
   background: ${colors.neutrals.cero};
   border: 1px solid ${colors.neutrals.three};
   border-radius: 16px 16px 0px 0px;
+  display: flex;
+  justify-content: center;
   padding: 64px 34px 76.9px;
 
   img {
-    max-width: 100%;
+    height: 204px;
+    width: 280px;
   }
 `;
 
@@ -53,4 +56,4 @@ const DetailWrapper = styled.div`
 
 const Button = styled(CTAButton)`
   margin-top: 16px;
-`
+`;
