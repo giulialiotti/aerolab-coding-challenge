@@ -1,6 +1,4 @@
 import React from "react";
-// styles
-import styled from "styled-components";
 
 // reusable components
 import { Section } from "../../components";
@@ -10,7 +8,10 @@ import { TitleAndControls } from "./TitleAndControls";
 import { Products } from "./Products";
 
 // functions
-import { getProducts, sortProducts } from "../../functions";
+import { getData, sortProducts } from "../../functions";
+
+// products endpoint
+const productsUrl = "https://coding-challenge-api.aerolab.co/products";
 
 export const Product = () => {
   const [products, setProducts] = React.useState([]);
@@ -29,7 +30,7 @@ export const Product = () => {
   };
 
   React.useEffect(() => {
-    getProducts().then((products) => {
+    getData(productsUrl).then((products) => {
       if (sortButtons.mostRecent) setProducts(products);
       if (sortButtons.lowestPrice) setProducts(products.sort(sortProducts));
       if (sortButtons.highestPrice) setProducts(products.sort(sortProducts).reverse());
