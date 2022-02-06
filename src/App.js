@@ -1,4 +1,4 @@
-import { Navbar, Product, Footer } from "./sections";
+import { Navbar, Hero, Product, Footer } from "./sections";
 import { Spacer } from "./components";
 
 function App() {
@@ -6,7 +6,8 @@ function App() {
     <>
       <Navbar />
       <main>
-        <Spacer />
+        <Hero />
+        <Spacer height='112px' />
         <Product />
         <Spacer />
       </main>
