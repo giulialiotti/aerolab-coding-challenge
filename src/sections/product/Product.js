@@ -29,11 +29,12 @@ export const Product = () => {
     setSortButtons,
   };
 
+  // Rearranged products array based on sort buttons state
   React.useEffect(() => {
     getData(productsUrl).then((products) => {
       if (sortButtons.mostRecent) setProducts(products);
-      if (sortButtons.lowestPrice) setProducts(products.sort(sortProducts));
-      if (sortButtons.highestPrice) setProducts(products.sort(sortProducts).reverse());
+      if (sortButtons.lowestPrice) setProducts([...products].sort(sortProducts));
+      if (sortButtons.highestPrice) setProducts([...products].sort(sortProducts).reverse());
     });
   }, [sortButtons]);
 

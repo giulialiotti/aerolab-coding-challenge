@@ -11,7 +11,7 @@ export const Products = ({ products }) => {
   return (
     <Wrapper>
       {products?.map((product) => {
-        return <ProductCard key={product.name} product={product} />;
+        return <ProductCard key={product._id} product={product} />;
       })}
     </Wrapper>
   );

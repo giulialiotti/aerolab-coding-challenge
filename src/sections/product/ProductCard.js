@@ -1,8 +1,13 @@
+import React, { useContext } from "react";
+
+// context
+import { UserContext } from "../../context/UserContext";
+
 // styles
 import styled from "styled-components";
 import { typographys } from "../../typographys";
 import { styles } from "../../styles";
-import { breakpoints } from "../../breakpoints";
+// import { breakpoints } from "../../breakpoints";
 
 // components
 import { CTAButton } from "../../components/CTAButton";
@@ -10,7 +15,22 @@ import { CTAButton } from "../../components/CTAButton";
 const { TextL1, TextL2AllCaps } = typographys;
 const { colors } = styles;
 
-export const ProductCard = ({ product: { name, category, img, cost } }) => {
+export const ProductCard = ({
+  product: { _id, name, category, img, cost }
+}) => {
+  const { user, handleRedeemProduct } = useContext(UserContext);
+ 
+  const canAfford = cost <= user.points;
+  const amountMissing = cost - user.points;
+
+  const product = {
+    productId: _id,
+  };
+
+  const handleRedeem = () => {
+    handleRedeemProduct(product);
+  };
+
   return (
     <Wrapper>
       <Card>
@@ -22,7 +42,12 @@ export const ProductCard = ({ product: { name, category, img, cost } }) => {
           <TextL2AllCaps color={colors.neutrals.six}>{category}</TextL2AllCaps>
         </DetailWrapper>
       </Card>
-      <Button product text={cost} />
+      <Button
+        product
+        disabled={canAfford ? false : true}
+        text={canAfford ? cost : amountMissing}
+        onClick={handleRedeem}
+      />
     </Wrapper>
   );
 };

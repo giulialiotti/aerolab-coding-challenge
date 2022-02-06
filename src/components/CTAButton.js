@@ -9,7 +9,7 @@ import { icons } from "../assets";
 export const CTAButton = ({ product, disabled, text, ...props }) => {
   return (
     <StyledButton type="button" product={product} disabled={disabled} {...props}>
-      {product && "Redeem for"}
+      {product && (!disabled ? "Redeem for" : "You need")}
       <Span bgImage={!disabled ? icons.aerolabWhite : icons.aerolabGray} />
       {text}
     </StyledButton>
