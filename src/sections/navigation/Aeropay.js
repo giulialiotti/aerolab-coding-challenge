@@ -71,19 +71,18 @@ export const Aeropay = ({
           </NumerAndDate>
         </AeroCardWrapper>
         <AmountsWrapper>
-          <SelectorButton isNumber onClick={() => handleAddPoints(body[0])}>
-            {body[0].amount}
-          </SelectorButton>
-          <SelectorButton
-            selected={true}
-            isNumber
-            onClick={() => handleAddPoints(body[1])}
-          >
-            {body[1].amount}
-          </SelectorButton>
-          <SelectorButton isNumber onClick={() => handleAddPoints(body[2])}>
-            {body[2].amount}
-          </SelectorButton>
+          {body.map((item, index) => {
+            return (
+              <SelectorButton
+                key={item.amount}
+                isNumber
+                selected={index === 1 ? true : false}
+                onClick={() => handleAddPoints(item)}
+              >
+                {item.amount}
+              </SelectorButton>
+            );
+          })}
         </AmountsWrapper>
         <AddPointsButton text="Add Points" />
       </Content>
