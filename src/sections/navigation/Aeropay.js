@@ -1,3 +1,5 @@
+import React from "react";
+
 // styles
 import styled from "styled-components";
 import { styles } from "../../styles";
@@ -11,7 +13,11 @@ import { FlexSpaceBetween, SelectorButton, CTAButton } from "../../components";
 
 const { TextL1, TextL2 } = typographys;
 
-export const Aeropay = ({ userData: { name, createDate } }) => {
+export const Aeropay = ({
+  userData: { name, createDate },
+  handleAddPoints,
+}) => {
+  // Clean date
   let date = new Date(createDate);
   let months = [
     "01",
@@ -31,6 +37,19 @@ export const Aeropay = ({ userData: { name, createDate } }) => {
   let month = months[monthIndex];
   let year = date.getFullYear().toString().slice(-2);
 
+  // Amounts for post request
+  let body = [
+    {
+      amount: 1000,
+    },
+    {
+      amount: 5000,
+    },
+    {
+      amount: 7500,
+    },
+  ];
+
   return (
     <Wrapper>
       <Header>
@@ -46,15 +65,25 @@ export const Aeropay = ({ userData: { name, createDate } }) => {
           </FlexSpaceBetween>
           <NumerAndDate>
             <TextL2 color={styles.colors.neutrals.one}>{name}</TextL2>
-            <TextL2 color={styles.colors.neutrals.one}>{month}/{year}</TextL2>
+            <TextL2 color={styles.colors.neutrals.one}>
+              {month}/{year}
+            </TextL2>
           </NumerAndDate>
         </AeroCardWrapper>
         <AmountsWrapper>
-          <SelectorButton isNumber>1000</SelectorButton>
-          <SelectorButton selected={true} isNumber>
-            5000
+          <SelectorButton isNumber onClick={() => handleAddPoints(body[0])}>
+            {body[0].amount}
           </SelectorButton>
-          <SelectorButton isNumber>7500</SelectorButton>
+          <SelectorButton
+            selected={true}
+            isNumber
+            onClick={() => handleAddPoints(body[1])}
+          >
+            {body[1].amount}
+          </SelectorButton>
+          <SelectorButton isNumber onClick={() => handleAddPoints(body[2])}>
+            {body[2].amount}
+          </SelectorButton>
         </AmountsWrapper>
         <AddPointsButton text="Add Points" />
       </Content>

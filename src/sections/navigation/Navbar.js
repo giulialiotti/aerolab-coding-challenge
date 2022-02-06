@@ -1,4 +1,7 @@
-import React from "react";
+import React, { useContext } from "react";
+
+// context
+import { UserContext } from "../../context/UserContext";
 
 // styles
 import styled from "styled-components";
@@ -11,15 +14,10 @@ import { logos, icons } from "../../assets";
 // self components
 import { Aeropay } from "./Aeropay";
 
-// functions
-import { getData } from "../../functions";
-
-// user endpoint
-const userUrl = "https://coding-challenge-api.aerolab.co/user/me";
-
 export const Navbar = () => {
+  const { user, handleAddPoints } = useContext(UserContext);
+
   const [showAeropay, setShowAeropay] = React.useState(false);
-  const [user, setUser] = React.useState([]);
 
   const arrowRef = React.useRef(null);
 
@@ -35,12 +33,6 @@ export const Navbar = () => {
     }
   };
 
-  React.useEffect(() => {
-    getData(userUrl).then((user) => {
-      setUser(user);
-    });
-  }, []);
-
   return (
     <Wrapper>
       <LogoWrapper>
@@ -54,7 +46,7 @@ export const Navbar = () => {
         <ArrowWrapper ref={arrowRef} onClick={handleAeropay}>
           <img src={icons.arrowNextIcon} alt="Arrow down icon" />
         </ArrowWrapper>
-        {showAeropay && <Aeropay userData={user} />}
+        {showAeropay && <Aeropay userData={user} handleAddPoints={handleAddPoints} />}
       </AeroCoinsWrapper>
     </Wrapper>
   );
