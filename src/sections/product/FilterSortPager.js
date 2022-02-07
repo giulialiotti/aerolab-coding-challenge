@@ -1,12 +1,17 @@
+// styles
 import styled from "styled-components";
 import { typographys } from "../../typographys";
 import { styles } from "../../styles";
 
+// components
 import { SelectorButton } from "../../components";
+
+// self components
+import { FilterCategory } from "./FilterCategory";
 
 const { TextL1 } = typographys;
 
-export const FilterSortPager = ({ buttonsState }) => {
+export const FilterSortPager = ({ categories, buttonsState }) => {
   const { sortButtons, setSortButtons } = buttonsState;
 
   const handleClick = (valueOne, valueTwo, valueThree) => {
@@ -19,6 +24,8 @@ export const FilterSortPager = ({ buttonsState }) => {
 
   return (
     <Wrapper>
+      <FilterCategory categories={categories} />
+      <Divider />
       <SortWrapper>
         <SortTitle color={styles.colors.neutrals.six}>Sort by:</SortTitle>
         <StyledButton
@@ -45,6 +52,7 @@ export const FilterSortPager = ({ buttonsState }) => {
 };
 
 const Wrapper = styled.div`
+  display: flex;
   margin-top: 40px;
 `;
 
@@ -59,4 +67,11 @@ const SortTitle = styled(TextL1)`
 
 const StyledButton = styled(SelectorButton)`
   margin-right: 12px;
+`;
+
+const Divider = styled.div`
+  background-color: ${styles.colors.neutrals.three};
+  margin: 0px 40px;
+  height: 59px;
+  width: 2px;
 `;

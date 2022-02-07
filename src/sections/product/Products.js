@@ -10,9 +10,10 @@ import { ProductCard } from "./ProductCard";
 export const Products = ({ products }) => {
   return (
     <Wrapper>
-      {products?.map((product) => {
-        return <ProductCard key={product._id} product={product} />;
-      })}
+      {products &&
+        products.map((product) => {
+          return <ProductCard key={product._id} product={product} />;
+        })}
     </Wrapper>
   );
 };
