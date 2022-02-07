@@ -19,4 +19,11 @@ export const animateWalkthroughCards = (refs) => {
         { xPercent: 0 },
         "<"
       );
+    
+  const killAnimation = () => {
+    timeline.scrollTrigger.kill(true);
+    timeline.pause(0).kill(true);
+  };
+
+  return () => killAnimation();
 }

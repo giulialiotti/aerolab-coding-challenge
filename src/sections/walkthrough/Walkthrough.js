@@ -1,8 +1,5 @@
 import React from "react";
 
-// gsap
-import { ScrollTrigger } from "gsap/ScrollTrigger";
-
 // styles
 import styled from "styled-components";
 import { breakpoints } from "../../breakpoints";
@@ -31,11 +28,9 @@ export const Walkthrough = () => {
 
   // Cards animation only for desktop breakpoint
   React.useLayoutEffect(() => {
-    ScrollTrigger.matchMedia({
-      "(min-width: 1920px)": function () {
-        animateWalkthroughCards(refs);
-      },
-    });
+    if (window.innerWidth >= 1920) {
+      animateWalkthroughCards(refs);
+    }
   }, []);
 
   return (
