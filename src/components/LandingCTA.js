@@ -31,6 +31,10 @@ const Link = styled.a`
   text-decoration: none;
   width: fit-content;
 
+  :hover {
+    background: ${styles.gradients.brand.hover};
+  }
+
   ${breakpoints.desktop} {
     font-size: 18px;
     margin-top: 64px;

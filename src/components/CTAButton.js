@@ -53,6 +53,13 @@ const StyledButton = styled.button`
   padding: ${(props) => (props.product ? "16px 24px" : "12px 24px")};
   width: 100%;
 
+  :hover {
+    background: ${(props) =>
+      !props.disabled
+        ? styles.gradients.brand.hover
+        : null};
+  }
+
   ${breakpoints.desktop} {
     font-size: 18px;
   }
