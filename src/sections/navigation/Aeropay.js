@@ -69,6 +69,9 @@ export const Aeropay = ({
               {month}/{year}
             </TextL2>
           </NumerAndDate>
+          <Waves>
+            <img src={icons.wavePattern} alt="" />
+          </Waves>
         </AeroCardWrapper>
         <AmountsWrapper>
           {body.map((item, index) => {
@@ -115,6 +118,7 @@ const Content = styled.div`
 const AeroCardWrapper = styled.div`
   background-color: ${styles.colors.neutrals.nine};
   border-radius: 8px;
+  overflow: hidden;
   padding: 16px;
   width: 264px;
 `;
@@ -140,4 +144,16 @@ const AmountsWrapper = styled(FlexSpaceBetween)`
 
 const AddPointsButton = styled(CTAButton)`
   margin-top: 24px;
+`;
+
+const Waves = styled.div`
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  top: 17%;
+  width: 100%;
+
+  img {
+    width: 100%;
+  }
 `;

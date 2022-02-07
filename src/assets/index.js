@@ -24,6 +24,8 @@ import enjoyIcon from "./icons/enjoy-icon.svg";
 import errorIcon from "./icons/error-icon.svg";
 import githubIcon from "./icons/github-icon.svg";
 import successIcon from "./icons/success-icon.svg";
+import wave from './icons/wave.svg';
+import wavePattern from './icons/wave-pattern.svg';
 
 /* --------------------- Logos --------------------- */
 
@@ -57,6 +59,8 @@ export const icons = {
   errorIcon,
   githubIcon,
   successIcon,
+  wave,
+  wavePattern
 };
 
 export const logos = {
