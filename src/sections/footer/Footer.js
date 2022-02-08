@@ -25,9 +25,11 @@ const Wrapper = styled.footer`
   display: flex;
   justify-content: center;
   padding: 46.5px 0;
+  margin-top: 80px;
 
   ${breakpoints.desktop} {
     padding: 80px 0;
+    margin-top: 160px;
   }
 `;
 

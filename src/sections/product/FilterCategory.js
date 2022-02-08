@@ -50,7 +50,12 @@ const Wrapper = styled.div`
 `;
 
 const SortTitle = styled(TextL1)`
-  margin-right: 16px;
+  display: none;
+
+  ${breakpoints.desktop} {
+    display: block;
+    margin-right: 16px;
+  }
 `;
 
 const Filter = styled.button`
@@ -67,10 +72,11 @@ const Filter = styled.button`
   font-weight: 600;
   line-height: 150%;
   color: ${styles.colors.neutrals.six};
-  width: 256px;
+  width: 100%;
 
   ${breakpoints.desktop} {
     font-size: 18px;
+    width: 256px;
   }
 `;
 

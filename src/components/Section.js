@@ -11,6 +11,7 @@ export const Section = ({ children, ...props }) => {
 const SectionWrapper = styled.section`
   padding-left: 5.3%;
   padding-right: 5.3%;
+  margin-top: ${(props) => props.mt || null};
 
   ${breakpoints.desktop} {
     padding-left: 12%;

@@ -20,7 +20,7 @@ export const Products = ({ products }) => {
 
 const Wrapper = styled.div`
   display: grid;
-  grid-template-columns: 1fr;
+  grid-template-columns: 100%;
   grid-gap: 48px 0;
   margin-top: 64px;
 

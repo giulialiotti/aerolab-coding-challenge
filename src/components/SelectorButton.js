@@ -26,6 +26,7 @@ const StyledButton = styled.button`
   line-height: 150%;
   padding: ${(props) => (props.isNumber ? '4px 19.6px' : '8px 24px' )};
   position: relative;
+  white-space: nowrap;
 
   &:after {
     content: "";

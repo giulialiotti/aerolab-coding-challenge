@@ -2,6 +2,7 @@
 import styled from "styled-components";
 import { typographys } from "../../typographys";
 import { styles } from "../../styles";
+import { breakpoints } from "../../breakpoints";
 
 // components
 import { SelectorButton } from "../../components";
@@ -52,17 +53,29 @@ export const FilterSortPager = ({ categories, buttonsState }) => {
 };
 
 const Wrapper = styled.div`
-  display: flex;
   margin-top: 40px;
+
+  ${breakpoints.desktop} {
+    display: flex;
+  }
 `;
 
 const SortWrapper = styled.div`
   display: flex;
   align-items: center;
+  margin-top: 24px;
+  
+  ${breakpoints.desktop} {
+    margin-top: 0;
+  }
 `;
 
 const SortTitle = styled(TextL1)`
-  margin-right: 16px;
+  display: none;
+
+  ${breakpoints.desktop} {
+    margin-right: 16px;
+  }
 `;
 
 const StyledButton = styled(SelectorButton)`
@@ -70,8 +83,13 @@ const StyledButton = styled(SelectorButton)`
 `;
 
 const Divider = styled.div`
-  background-color: ${styles.colors.neutrals.three};
-  margin: 0px 40px;
-  height: 59px;
-  width: 2px;
+  display: none;
+
+  ${breakpoints.desktop} {
+    display: block;
+    background-color: ${styles.colors.neutrals.three};
+    margin: 0px 40px;
+    height: 59px;
+    width: 2px;
+  }
 `;

@@ -1,7 +1,8 @@
 import React from "react";
 
-// reusable components
-import { Section } from "../../components";
+// styles
+import styled from "styled-components";
+import { breakpoints } from "../../breakpoints";
 
 // self components
 import { TitleAndControls } from "./TitleAndControls";
@@ -48,12 +49,25 @@ export const Product = () => {
   }, [sortButtons]);
 
   return (
-    <Section id="product">
+    <SectionWrapper id="product">
       <TitleAndControls
         categories={filteredCategories}
         buttonsState={buttonsState}
       />
       <Products products={products} />
-    </Section>
+    </SectionWrapper>
   );
 };
+
+
+const SectionWrapper = styled.section`
+  padding-left: 5.3%;
+  padding-right: 5.3%;
+  margin-top: 80px;
+
+  ${breakpoints.desktop} {
+    padding-left: 12%;
+    padding-right: 12%;
+    margin-top: 160px;
+  }
+`;
