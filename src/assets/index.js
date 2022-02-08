@@ -26,6 +26,7 @@ import githubIcon from "./icons/github-icon.svg";
 import successIcon from "./icons/success-icon.svg";
 import wave from './icons/wave.svg';
 import wavePattern from './icons/wave-pattern.svg';
+import wavePatternCard from './icons/wave-pattern-card.svg';
 
 /* --------------------- Logos --------------------- */
 
@@ -60,7 +61,8 @@ export const icons = {
   githubIcon,
   successIcon,
   wave,
-  wavePattern
+  wavePattern,
+  wavePatternCard
 };
 
 export const logos = {

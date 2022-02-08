@@ -70,7 +70,7 @@ export const Aeropay = ({
             </TextL2>
           </NumerAndDate>
           <Waves>
-            <img src={icons.wavePattern} alt="" />
+            <img src={icons.wavePatternCard} alt="" />
           </Waves>
         </AeroCardWrapper>
         <AmountsWrapper>
@@ -120,6 +120,7 @@ const AeroCardWrapper = styled.div`
   border-radius: 8px;
   overflow: hidden;
   padding: 16px;
+  position: relative;
   width: 264px;
 `;
 
@@ -150,8 +151,8 @@ const Waves = styled.div`
   position: absolute;
   left: 50%;
   transform: translateX(-50%);
-  top: 17%;
-  width: 100%;
+  top: 0%;
+  width: 105%;
 
   img {
     width: 100%;
