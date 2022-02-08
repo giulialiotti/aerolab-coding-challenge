@@ -12,7 +12,7 @@ export const CTAButton = ({ product, disabled, text, ...props }) => {
   const [redeemText, setRedeemText] = React.useState("Redeem for");
 
   const handleChange = (text) => {
-    if (!disabled) setRedeemText(text);
+    if (!disabled && product) setRedeemText(text);
   };
 
   return (
