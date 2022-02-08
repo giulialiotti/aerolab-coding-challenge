@@ -16,29 +16,27 @@ export const UserProvider = ({ children }) => {
   const [user, setUser] = React.useState({});
   const [addItemSucces, setAddItemSucces] = React.useState(false);
 
-  const updateUser = () => {
+  // Set user fetched from api
+  React.useEffect(() => {
     getData(userUrl).then((user) => {
       setUser(user);
     });
-  };
-
-  // Set user fetched from api
-  React.useEffect(() => {
-    updateUser();
   }, []);
 
   // Adding points and refresh user
-  const handleAddPoints = (body) => {
+  const handleAddPoints = (body, amount) => {
     addItem(body, addPointsUrl).then((points) => {
-      updateUser();
+      setUser({ ...user, points: user.points + amount });
+      console.log(points);
     });
   };
 
+  // Redeem product and save and save it in user redeem history
   const handleRedeemProduct = (item) => {
     addItem(item, redeemProductUrl).then((product) => {
       user.redeemHistory.push(product);
       setAddItemSucces(true);
-      updateUser();
+      console.log(product);
     });
   };
 
@@ -46,6 +44,7 @@ export const UserProvider = ({ children }) => {
     <UserContext.Provider
       value={{
         user,
+        setUser,
         handleAddPoints,
         handleRedeemProduct,
         addItemSucces,

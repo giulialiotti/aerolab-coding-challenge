@@ -80,7 +80,7 @@ export const Aeropay = ({
                 key={item.amount}
                 isNumber
                 selected={index === 1 ? true : false}
-                onClick={() => handleAddPoints(item)}
+                onClick={() => handleAddPoints(item, item.amount)}
               >
                 {item.amount}
               </SelectorButton>

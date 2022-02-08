@@ -18,7 +18,7 @@ const { colors } = styles;
 export const ProductCard = ({
   product: { _id, name, category, img, cost }
 }) => {
-  const { user, handleRedeemProduct } = useContext(UserContext);
+  const { user, setUser, handleRedeemProduct } = useContext(UserContext);
  
   const canAfford = cost <= user.points;
   const amountMissing = cost - user.points;
@@ -29,6 +29,7 @@ export const ProductCard = ({
 
   const handleRedeem = () => {
     handleRedeemProduct(product);
+    setUser({ ...user, points: user.points - cost });
   };
 
   return (
