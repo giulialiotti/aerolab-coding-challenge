@@ -68,19 +68,19 @@ const ImageWrapper = styled.div`
 `;
 
 const IllustrationBG = styled.div`
-  background: ${styles.gradients.specials.sectionBg};
-  box-shadow: 0px 4px 16px rgba(0, 0, 0, 0.12);
-  position: absolute;
-  bottom: 0;
-  left: 50%;
-  transform: translateX(-50%);
-  height: 79%;
-  width: 100vw;
-  z-index: 0;
+  display: none;
 
   ${breakpoints.desktop} {
+    display: block;
     border-radius: 104px;
+    background: ${styles.gradients.specials.sectionBg};
+    box-shadow: 0px 4px 16px rgba(0, 0, 0, 0.12);
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
     height: 600px;
     width: 722px;
+    z-index: 0;
   }
 `;

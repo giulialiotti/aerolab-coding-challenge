@@ -15,7 +15,6 @@ function App() {
         <Navbar />
         <Main>
           <Hero />
-          <Spacer height="112px" />
           <Walkthrough />
           <Spacer />
           <Product />

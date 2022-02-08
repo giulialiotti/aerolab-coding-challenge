@@ -70,15 +70,31 @@ export const Walkthrough = () => {
 
 const Wrapper = styled.section`
   position: relative;
+  padding-left: 5.3%;
+  padding-right: 5.3%;
+  margin-top: -24px;
+
+  ${breakpoints.desktop} {
+    padding-left: 0;
+    padding-right: 0;
+    margin-top: 112px;
+  }
 `;
 
 const Background = styled.div`
   background: ${styles.gradients.specials.sectionBg};
   position: absolute;
-  top: 50%;
-  transform: translateY(-50%);
-  height: 528px;
-  width: 100%;
+  left: 0;
+  bottom: -2%;
+  height: 132%;
+  width: 100vw;
+
+  ${breakpoints.desktop} {
+    top: 50%;
+    transform: translateY(-50%);
+    height: 528px;
+    width: 100%;
+  }
 `;
 
 const CardsWrapper = styled.div`
@@ -90,19 +106,32 @@ const CardsWrapper = styled.div`
 `;
 
 const FirstCard = styled(IntroCard)`
-  transform: rotate(-3deg) translateX(16%);
-  will-change: transform;
   z-index: 1;
+  
+  ${breakpoints.desktop} {
+    transform: rotate(-3deg) translateX(16%);
+    will-change: transform;
+  }
 `;
 
 const SecondCard = styled(IntroCard)`
-  transform: translateY(-6%);
-  will-change: transform;
-  z-index: 2;
+  margin-top: 24px;
+
+  ${breakpoints.desktop} {
+    margin-top: 0;
+    transform: translateY(-6%);
+    will-change: transform;
+    z-index: 2;
+  }
 `;
 
 const ThirdCard = styled(IntroCard)`
-  transform: rotate(3deg) translateX(-16%);
-  will-change: transform;
-  z-index: 3;
+  margin-top: 24px;
+
+  ${breakpoints.desktop} {
+    margin-top: 0;
+    transform: rotate(3deg) translateX(-16%);
+    will-change: transform;
+    z-index: 3;
+  }
 `;
