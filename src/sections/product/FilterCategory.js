@@ -97,7 +97,12 @@ const CategoriesList = styled.ul`
   position: absolute;
   top: 110%;
   right: 0;
-  width: 256px;
+  width: 100%;
+  z-index: 3;
+
+  ${breakpoints.desktop} {
+    width: 256px;
+  }
 `;
 
 const CategoriesItem = styled.li`
