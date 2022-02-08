@@ -18,7 +18,7 @@ export const LandingCTA = ({ href }) => {
 const Link = styled.a`
   background: ${styles.gradients.brand.default};
   border: none;
-  border-radius: 16px;
+  border-radius: 24px;
   box-shadow: ${styles.shadows.elevationOne.default};
   color: ${styles.colors.neutrals.cero};
   cursor: pointer;
@@ -27,7 +27,8 @@ const Link = styled.a`
   font-size: 16px;
   font-weight: 600;
   line-height: 150%;
-  padding: 24px 40px;
+  padding: 20px 48px;
+  margin-top: 40px;
   text-decoration: none;
   width: fit-content;
 
@@ -36,12 +37,19 @@ const Link = styled.a`
   }
 
   ${breakpoints.desktop} {
+    border-radius: 16px;
     font-size: 18px;
+    padding: 24px 40px;
     margin-top: 64px;
   }
 `;
 
 const ArrowIcon = styled.img`
-  margin-left: 12.5px;
-  width: 14.25px;
+  margin-left: 10.38px;
+  width: 10.69px;
+
+  ${breakpoints.desktop} {
+    margin-left: 12.5px;
+    width: 14.25px;
+  }
 `;
