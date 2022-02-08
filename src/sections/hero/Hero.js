@@ -24,6 +24,10 @@ export const Hero = () => {
 };
 
 const HeroWrapper = styled.header`
+  margin-top: 168px;
+  padding-left: 5.3%;
+  padding-right: 5.3%;
+
   ${breakpoints.desktop} {
     display: flex;
     align-items: end;
@@ -36,31 +40,47 @@ const HeroWrapper = styled.header`
 
 const IllustrationWrapper = styled.div`
   position: relative;
+  margin-top: 20px;
+
+  ${breakpoints.desktop} {
+    margin-top: 0;
+  }
 `;
 
 const ImageWrapper = styled.div`
   display: flex;
   justify-content: center;
   position: relative;
-  height: 795px;
-  width: 897px;
+  transform: translateX(-21%);
+  width: 170%;
   z-index: 1;
 
   img {
     max-width: 100%;
     height: 100%;
   }
+
+  ${breakpoints.desktop} {
+    transform: unset;
+    height: 795px;
+    width: 897px;
+  }
 `;
 
 const IllustrationBG = styled.div`
   background: ${styles.gradients.specials.sectionBg};
   box-shadow: 0px 4px 16px rgba(0, 0, 0, 0.12);
-  border-radius: 104px;
   position: absolute;
   bottom: 0;
   left: 50%;
   transform: translateX(-50%);
-  height: 600px;
-  width: 722px;
+  height: 79%;
+  width: 100vw;
   z-index: 0;
+
+  ${breakpoints.desktop} {
+    border-radius: 104px;
+    height: 600px;
+    width: 722px;
+  }
 `;

@@ -7,6 +7,7 @@ import { UserContext } from "../../context/UserContext";
 import styled from "styled-components";
 import { styles } from "../../styles";
 import { typographys } from "../../typographys";
+import { breakpoints } from "../../breakpoints";
 
 // assets
 import { logos, icons } from "../../assets";
@@ -36,7 +37,16 @@ export const Navbar = () => {
   return (
     <Wrapper>
       <LogoWrapper>
-        <img src={logos.aerolabLogoComplete} alt="Aerolab logo" />
+        <img
+          className="logo-mobile"
+          src={logos.aerolabLogo}
+          alt="Aerolab logo"
+        />
+        <img
+          className="logo-desktop"
+          src={logos.aerolabLogoComplete}
+          alt="Aerolab logo"
+        />
       </LogoWrapper>
       <AeroCoinsWrapper>
         <AeroIconWrapper>
@@ -46,7 +56,9 @@ export const Navbar = () => {
         <ArrowWrapper ref={arrowRef} onClick={handleAeropay}>
           <img src={icons.arrowNextIcon} alt="Arrow down icon" />
         </ArrowWrapper>
-        {showAeropay && <Aeropay userData={user} handleAddPoints={handleAddPoints} />}
+        {showAeropay && (
+          <Aeropay userData={user} handleAddPoints={handleAddPoints} />
+        )}
       </AeroCoinsWrapper>
     </Wrapper>
   );
@@ -59,19 +71,39 @@ const Wrapper = styled.nav`
   display: flex;
   align-items: center;
   justify-content: space-between;
-  padding: 40px 12%;
+  padding: 40px 5.3%;
   position: fixed;
   top: 0;
   left: 0;
   width: 100%;
   z-index: 10;
+
+  ${breakpoints.desktop} {
+    padding: 40px 12%;
+  }
 `;
 
 const LogoWrapper = styled.div`
-  width: 126px;
+  width: 38.77px;
+
+  .logo-desktop {
+    display: none;
+  }
 
   img {
     max-width: 100%;
+  }  
+
+  ${breakpoints.desktop} {
+    width: 126px;
+
+    .logo-mobile {
+      display: none;
+    }
+
+    .logo-desktop {
+      display: block;
+    }
   }
 `;
 
@@ -89,11 +121,16 @@ const AeroCoinsWrapper = styled.div`
 const AeroIconWrapper = styled.div`
   display: flex;
   margin-right: 8px;
-  height: 32px;
-  width: 32px;
+  height: 24px;
+  width: 24px;
 
   img {
     max-width: 100%;
+  }
+
+  ${breakpoints.desktop} {
+    height: 32px;
+    width: 32px;
   }
 `;
 

@@ -2,6 +2,7 @@
 import styled from "styled-components";
 import { styles } from "../../styles";
 import { typographys } from "../../typographys";
+import { breakpoints } from "../../breakpoints";
 
 // components
 import { LandingCTA } from "../../components";
@@ -12,9 +13,7 @@ const { TextL1AllCaps, TitleL1, TextL1 } = typographys;
 export const LandingCopy = () => {
   return (
     <Wrapper>
-      <TextL1AllCaps color={styles.colors.neutrals.six}>
-        EXPLORE THE
-      </TextL1AllCaps>
+      <Label color={styles.colors.neutrals.six}>EXPLORE THE</Label>
       <Title>
         <Span>Tech</Span>
         <br />
@@ -30,12 +29,33 @@ export const LandingCopy = () => {
 };
 
 const Wrapper = styled.div`
-  margin-bottom: 29px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 0 auto;
   width: min-content;
+
+  ${breakpoints.desktop} {
+    display: block;
+    margin: 0 0 29px;
+  }
+`;
+
+const Label = styled(TextL1AllCaps)`
+  text-align: center;
+
+  ${breakpoints.desktop} {
+    text-align: left;
+  }
 `;
 
 const Title = styled(TitleL1)`
+  text-align: center;
   margin-top: 8px;
+
+  ${breakpoints.desktop} {
+    text-align: left;
+  }
 `;
 
 const Span = styled.span`
@@ -46,5 +66,10 @@ const Span = styled.span`
 `;
 
 const Text = styled(TextL1)`
+  text-align: center;
   margin-top: 24px;
+
+  ${breakpoints.desktop} {
+    text-align: left;
+  }
 `;
