@@ -14,6 +14,7 @@ export const UserContext = createContext();
 
 export const UserProvider = ({ children }) => {
   const [user, setUser] = React.useState({});
+  const [addItemSucces, setAddItemSucces] = React.useState(false);
 
   const updateUser = () => {
     getData(userUrl).then((user) => {
@@ -36,15 +37,20 @@ export const UserProvider = ({ children }) => {
   const handleRedeemProduct = (item) => {
     addItem(item, redeemProductUrl).then((product) => {
       user.redeemHistory.push(product);
+      setAddItemSucces(true);
       updateUser();
     });
   };
 
-  console.log(user);
-
   return (
     <UserContext.Provider
-      value={{ user, handleAddPoints, handleRedeemProduct }}
+      value={{
+        user,
+        handleAddPoints,
+        handleRedeemProduct,
+        addItemSucces,
+        setAddItemSucces,
+      }}
     >
       {children}
     </UserContext.Provider>
