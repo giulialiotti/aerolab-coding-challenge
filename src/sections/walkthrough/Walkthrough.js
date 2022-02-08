@@ -40,7 +40,7 @@ export const Walkthrough = () => {
         <FirstCard
           designatedRef={cardOneRef}
           image={illustrations.walkthrougOneDesktop}
-          alt=""
+          alt="Illustration of woman on top of spaceship"
           title="1—browse"
           text="Browse our tech catalog with more than 20 top tech products"
           icon={icons.browseIcon}
@@ -48,7 +48,7 @@ export const Walkthrough = () => {
         />
         <SecondCard
           image={illustrations.walkthrougTwoDesktop}
-          alt=""
+          alt="Illustration of hands"
           title="2—choose"
           text="Exchange your hard earned AeroPoints for the item you want"
           icon={icons.chooseIcon}
@@ -57,7 +57,7 @@ export const Walkthrough = () => {
         <ThirdCard
           designatedRef={cardThreeRef}
           image={illustrations.walkthrougThreeDesktop}
-          alt=""
+          alt="Illustration of person working in his desk"
           title="3—enjoy!"
           text="All done, you can relax! We’ll take care of delivery of your tech item!"
           icon={icons.enjoyIcon}
