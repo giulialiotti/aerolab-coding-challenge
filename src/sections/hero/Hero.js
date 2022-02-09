@@ -28,6 +28,11 @@ const HeroWrapper = styled.header`
   padding-left: 5.3%;
   padding-right: 5.3%;
 
+  ${breakpoints.tablet} {
+    padding-left: 1.7%;
+    padding-right: 1.7%;
+  }
+
   ${breakpoints.desktop} {
     display: flex;
     align-items: end;
@@ -40,10 +45,15 @@ const HeroWrapper = styled.header`
 
 const IllustrationWrapper = styled.div`
   position: relative;
-  margin-top: 20px;
+  margin: 20px 0 0;
+
+  ${breakpoints.tablet} {
+    margin: 0 auto;
+    width: min-content;
+  }
 
   ${breakpoints.desktop} {
-    margin-top: 0;
+    margin: 0;
   }
 `;
 
@@ -58,6 +68,12 @@ const ImageWrapper = styled.div`
   img {
     max-width: 100%;
     height: 100%;
+  }
+
+  ${breakpoints.tablet} {
+    transform: unset;
+    height: 518.58px;
+    width: 580px;
   }
 
   ${breakpoints.desktop} {
