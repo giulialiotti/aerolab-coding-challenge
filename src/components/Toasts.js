@@ -40,7 +40,7 @@ export const Toasts = () => {
         </IconWrapper>
         {addItemSucces ? (
           <TextL1 color={styles.colors.neutrals.six}>
-            <Span>iPad Mini</Span> redeemed successfully
+            <Span>Product</Span> redeemed successfully
           </TextL1>
         ) : (
           <TextL1 color={styles.colors.neutrals.six}>

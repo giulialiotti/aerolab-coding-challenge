@@ -7,7 +7,7 @@ import { breakpoints } from "../../breakpoints";
 import { LandingCopy } from "./LandingCopy";
 
 // assets
-import { illustrations } from "../../assets";
+import { icons, illustrations } from "../../assets";
 
 export const Hero = () => {
   return (
@@ -19,6 +19,12 @@ export const Hero = () => {
         </ImageWrapper>
         <IllustrationBG />
       </IllustrationWrapper>
+      <Waves>
+        <img src={icons.wavePattern} alt="Wave pattern" />
+        <img src={icons.wavePattern} alt="Wave pattern" />
+        <img src={icons.wavePattern} alt="Wave pattern" />
+        <img src={icons.wavePattern} alt="Wave pattern" />
+      </Waves>
     </HeroWrapper>
   );
 };
@@ -98,5 +104,46 @@ const IllustrationBG = styled.div`
     height: 600px;
     width: 722px;
     z-index: 0;
+  }
+`;
+
+const Waves = styled.div`
+  overflow: hidden;
+  position: absolute;
+  top: 9%;
+  left: 0;
+  width: 100%;
+  z-index: -1;
+
+  img:nth-child(n+2) { 
+    margin-top: -18px;
+  }
+
+  img:nth-child(n + 3) {
+    display: none;
+  }
+
+  ${breakpoints.tablet} {
+    top: 9.8%;
+
+    img {
+      width: 100%;
+    }
+
+    img:nth-child(n + 3) {
+      display: block;
+    }
+
+    img:nth-child(4) {
+      display: none;
+    }
+  }
+
+  ${breakpoints.desktop} {
+    top: 14.5%;
+
+    img:nth-child(4) {
+      display: block;
+    }
   }
 `;
