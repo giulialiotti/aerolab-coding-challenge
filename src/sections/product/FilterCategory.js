@@ -47,6 +47,14 @@ const Wrapper = styled.div`
   display: flex;
   align-items: center;
   position: relative;
+
+  ${breakpoints.tablet} {
+    width: min-content;
+  }
+
+  ${breakpoints.desktop} {
+    width: auto;
+  }
 `;
 
 const SortTitle = styled(TextL1)`
@@ -74,9 +82,12 @@ const Filter = styled.button`
   color: ${styles.colors.neutrals.six};
   width: 100%;
 
+  ${breakpoints.tablet} {
+    width: 256px;
+  }
+
   ${breakpoints.desktop} {
     font-size: 18px;
-    width: 256px;
   }
 `;
 
@@ -100,7 +111,7 @@ const CategoriesList = styled.ul`
   width: 100%;
   z-index: 3;
 
-  ${breakpoints.desktop} {
+  ${breakpoints.tablet} {
     width: 256px;
   }
 `;

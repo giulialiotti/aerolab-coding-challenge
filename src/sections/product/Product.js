@@ -59,11 +59,16 @@ export const Product = () => {
   );
 };
 
-
 const SectionWrapper = styled.section`
   padding-left: 5.3%;
   padding-right: 5.3%;
   margin-top: 80px;
+
+  ${breakpoints.tablet} {
+    padding-left: 1.7%;
+    padding-right: 1.7%;
+    margin-top: 170px;
+  }
 
   ${breakpoints.desktop} {
     padding-left: 12%;

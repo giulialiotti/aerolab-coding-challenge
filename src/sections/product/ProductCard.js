@@ -11,6 +11,7 @@ import { styles } from "../../styles";
 
 // components
 import { CTAButton } from "../../components/CTAButton";
+import { breakpoints } from "../../breakpoints";
 
 const { TextL1, TextL2AllCaps } = typographys;
 const { colors } = styles;
@@ -65,11 +66,19 @@ const ImgWrapper = styled.div`
   border-radius: 16px 16px 0px 0px;
   display: flex;
   justify-content: center;
-  padding: 64px 34px 76.9px;
+  padding: 64px 28px 80px;
 
   img {
     height: 204px;
     width: 280px;
+  }
+
+  ${breakpoints.tablet} {
+    padding: 64px 16px;
+  }
+
+  ${breakpoints.desktop} {
+    padding: 64px 34px 76.9px;
   }
 `;
 

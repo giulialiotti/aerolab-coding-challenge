@@ -55,8 +55,13 @@ export const FilterSortPager = ({ categories, buttonsState }) => {
 const Wrapper = styled.div`
   margin-top: 40px;
 
+  ${breakpoints.tablet} {
+    margin-top: 42px;
+  }
+
   ${breakpoints.desktop} {
     display: flex;
+    margin-top: 40px;
   }
 `;
 
@@ -64,6 +69,10 @@ const SortWrapper = styled.div`
   display: flex;
   align-items: center;
   margin-top: 24px;
+
+  ${breakpoints.tablet} {
+    margin-top: 26.5px;
+  }
   
   ${breakpoints.desktop} {
     margin-top: 0;
