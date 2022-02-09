@@ -78,6 +78,10 @@ const Wrapper = styled.nav`
   width: 100%;
   z-index: 10;
 
+  ${breakpoints.tablet} {
+    padding: 46px 4.3%;
+  }
+
   ${breakpoints.desktop} {
     padding: 40px 12%;
   }
