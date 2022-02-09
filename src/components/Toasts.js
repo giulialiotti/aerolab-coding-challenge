@@ -7,6 +7,7 @@ import { UserContext } from "../context/UserContext";
 import styled from "styled-components";
 import { styles } from "../styles";
 import { typographys } from "../typographys";
+import { breakpoints } from "../breakpoints";
 
 // assets
 import { icons } from "../assets";
@@ -67,9 +68,16 @@ const Wrapper = styled.div`
   padding: 24px;
   position: fixed;
   bottom: 40px;
-  left: 80px;
+  left: 5%;
   margin-top: 12px;
-  width: 532px;
+  width: 90%;
+  z-index: 15;
+
+  ${breakpoints.tablet} {
+    bottom: 40px;
+    left: 80px;
+    width: 532px;
+  }
 `;
 
 const IconAndText = styled.div`
