@@ -20,16 +20,10 @@ export const Walkthrough = () => {
   const cardOneRef = React.useRef(null);
   const cardThreeRef = React.useRef(null);
 
-  const refs = {
-    cardsWrapperRef,
-    cardOneRef,
-    cardThreeRef,
-  };
-
   // Cards animation only for desktop breakpoint
   React.useLayoutEffect(() => {
     if (window.innerWidth >= 1920) {
-      animateWalkthroughCards(refs);
+      animateWalkthroughCards(cardsWrapperRef, cardOneRef, cardThreeRef);
     }
   }, []);
 
