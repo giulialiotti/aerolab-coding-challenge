@@ -27,9 +27,12 @@ const Wrapper = styled.footer`
   padding: 46.5px 0;
   margin-top: 80px;
 
+  ${breakpoints.tablet} {
+    margin-top: 160px;
+  }
+
   ${breakpoints.desktop} {
     padding: 80px 0;
-    margin-top: 160px;
   }
 `;
 
