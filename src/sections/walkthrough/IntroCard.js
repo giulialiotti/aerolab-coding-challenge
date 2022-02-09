@@ -44,6 +44,10 @@ const Wrapper = styled.div`
   position: relative;
   width: 100%;
 
+  ${breakpoints.tablet} {
+    width: 32.5%;
+  }
+
   ${breakpoints.desktop} {
     background-color: ${styles.colors.neutrals.cero};
     width: 532px;

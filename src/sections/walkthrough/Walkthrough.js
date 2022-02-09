@@ -74,6 +74,11 @@ const Wrapper = styled.section`
   padding-right: 5.3%;
   margin-top: -24px;
 
+  ${breakpoints.tablet} {
+    padding-left: 1.7%;
+    padding-right: 1.7%;
+  }
+
   ${breakpoints.desktop} {
     padding-left: 0;
     padding-right: 0;
@@ -89,8 +94,15 @@ const Background = styled.div`
   height: 132%;
   width: 100vw;
 
+  ${breakpoints.tablet} {
+    bottom: -6%;
+    height: 142%;
+    width: 100%;
+  }
+
   ${breakpoints.desktop} {
     top: 50%;
+    bottom: unset;
     transform: translateY(-50%);
     height: 528px;
     width: 100%;
@@ -98,8 +110,13 @@ const Background = styled.div`
 `;
 
 const CardsWrapper = styled.div`
-  ${breakpoints.desktop} {
+  ${breakpoints.tablet} {
     display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  ${breakpoints.desktop} {
     margin: 0 auto;
     width: max-content;
   }
@@ -107,7 +124,7 @@ const CardsWrapper = styled.div`
 
 const FirstCard = styled(IntroCard)`
   z-index: 1;
-  
+
   ${breakpoints.desktop} {
     transform: rotate(-3deg) translateX(16%);
     will-change: transform;
@@ -117,19 +134,25 @@ const FirstCard = styled(IntroCard)`
 const SecondCard = styled(IntroCard)`
   margin-top: 24px;
 
-  ${breakpoints.desktop} {
+  ${breakpoints.tablet} {
     margin-top: 0;
+    z-index: 2;
+  }
+
+  ${breakpoints.desktop} {
     transform: translateY(-6%);
     will-change: transform;
-    z-index: 2;
   }
 `;
 
 const ThirdCard = styled(IntroCard)`
   margin-top: 24px;
 
-  ${breakpoints.desktop} {
+  ${breakpoints.tablet} {
     margin-top: 0;
+  }
+
+  ${breakpoints.desktop} {
     transform: rotate(3deg) translateX(-16%);
     will-change: transform;
     z-index: 3;
