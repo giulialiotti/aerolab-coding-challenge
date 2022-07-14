@@ -2,7 +2,7 @@ import React from "react";
 
 // styles
 import styled from "styled-components";
-import { breakpoints } from "../../breakpoints";
+import { breakpoints } from "../../styles";
 
 // components
 import { ProductCard } from "./ProductCard";

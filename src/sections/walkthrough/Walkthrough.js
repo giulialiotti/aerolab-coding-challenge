@@ -2,14 +2,13 @@ import React from "react";
 
 // styles
 import styled from "styled-components";
-import { breakpoints } from "../../breakpoints";
+import { styles, breakpoints } from "../../styles";
 
 // self components
 import { IntroCard } from "./IntroCard";
 
 // assets
 import { illustrations, icons } from "../../assets";
-import { styles } from "../../styles";
 
 // animation
 // import { animateWalkthroughCards } from "../../animations";

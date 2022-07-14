@@ -1,8 +1,6 @@
 // styles
 import styled from "styled-components";
-import { typographys } from "../../typographys";
-import { styles } from "../../styles";
-import { breakpoints } from "../../breakpoints";
+import { styles, breakpoints, typographys } from "../../styles";
 
 // components
 import { SelectorButton } from "../../components";
@@ -73,7 +71,7 @@ const SortWrapper = styled.div`
   ${breakpoints.tablet} {
     margin-top: 26.5px;
   }
-  
+
   ${breakpoints.desktopXL} {
     margin-top: 0;
   }

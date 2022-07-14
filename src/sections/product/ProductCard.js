@@ -5,22 +5,19 @@ import { UserContext } from "../../context/UserContext";
 
 // styles
 import styled from "styled-components";
-import { typographys } from "../../typographys";
-import { styles } from "../../styles";
-// import { breakpoints } from "../../breakpoints";
+import { styles, typographys, breakpoints } from "../../styles";
 
 // components
 import { CTAButton } from "../../components/CTAButton";
-import { breakpoints } from "../../breakpoints";
 
 const { TextL1, TextL2AllCaps } = typographys;
 const { colors } = styles;
 
 export const ProductCard = ({
-  product: { _id, name, category, img, cost }
+  product: { _id, name, category, img, cost },
 }) => {
   const { user, setUser, handleRedeemProduct } = useContext(UserContext);
- 
+
   const canAfford = cost <= user.points;
   const amountMissing = cost - user.points;
 

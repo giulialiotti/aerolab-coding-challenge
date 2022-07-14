@@ -2,8 +2,7 @@ import React from "react";
 
 // styles
 import styled from "styled-components";
-import { styles } from "../../styles";
-import { typographys } from "../../typographys";
+import { styles, typographys } from "../../styles";
 
 // assets
 import { icons } from "../../assets";

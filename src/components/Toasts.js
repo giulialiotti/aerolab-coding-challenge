@@ -5,9 +5,7 @@ import { UserContext } from "../context/UserContext";
 
 // styles
 import styled from "styled-components";
-import { styles } from "../styles";
-import { typographys } from "../typographys";
-import { breakpoints } from "../breakpoints";
+import { styles, breakpoints, typographys } from "../styles";
 
 // assets
 import { icons } from "../assets";
@@ -27,7 +25,7 @@ export const Toasts = () => {
   React.useEffect(() => {
     if (addItemSucces) setShowToast(true);
     setTimeout(closeToast, 6000);
-  // eslint-disable-next-line react-hooks/exhaustive-deps
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [addItemSucces]);
 
   return (

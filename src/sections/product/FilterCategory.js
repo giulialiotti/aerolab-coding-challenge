@@ -2,9 +2,7 @@ import React from "react";
 
 // styles
 import styled from "styled-components";
-import { typographys } from "../../typographys";
-import { styles } from "../../styles";
-import { breakpoints } from "../../breakpoints";
+import { styles, typographys, breakpoints } from "../../styles";
 
 const { TextL1 } = typographys;
 

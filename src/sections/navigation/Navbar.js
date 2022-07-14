@@ -5,9 +5,7 @@ import { UserContext } from "../../context/UserContext";
 
 // styles
 import styled from "styled-components";
-import { styles } from "../../styles";
-import { typographys } from "../../typographys";
-import { breakpoints } from "../../breakpoints";
+import { styles, breakpoints, typographys } from "../../styles";
 
 // assets
 import { logos, icons } from "../../assets";
@@ -96,7 +94,7 @@ const LogoWrapper = styled.div`
 
   img {
     max-width: 100%;
-  }  
+  }
 
   ${breakpoints.desktopXL} {
     width: 126px;

@@ -2,7 +2,7 @@ import React from "react";
 
 // styles
 import styled from "styled-components";
-import { breakpoints } from "../../breakpoints";
+import { breakpoints } from "../../styles";
 
 // self components
 import { TitleAndControls } from "./TitleAndControls";

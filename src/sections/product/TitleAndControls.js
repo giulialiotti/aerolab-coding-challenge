@@ -1,6 +1,5 @@
 import styled from "styled-components";
-import { typographys } from "../../typographys";
-import { styles } from "../../styles";
+import { styles, typographys } from "../../styles";
 
 import { FilterSortPager } from "./FilterSortPager";
 

@@ -1,8 +1,6 @@
 // styles
 import styled from "styled-components";
-import { styles } from "../../styles";
-import { typographys } from "../../typographys";
-import { breakpoints } from "../../breakpoints";
+import { styles, breakpoints, typographys } from "../../styles";
 
 // destructuring type styles
 const { TitleL3, TextL1 } = typographys;

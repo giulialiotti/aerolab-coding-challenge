@@ -2,8 +2,7 @@ import React from "react";
 
 // styles
 import styled from "styled-components";
-import { styles } from "../styles";
-import { breakpoints } from "../breakpoints";
+import { styles, breakpoints } from "../styles";
 
 // assets
 import { icons } from "../assets";

@@ -2,7 +2,7 @@ import React from "react";
 
 // styles
 import styled from "styled-components";
-import { breakpoints } from "../breakpoints";
+import { breakpoints } from "../styles";
 
 export const Section = ({ children, ...props }) => {
   return <SectionWrapper {...props}>{children}</SectionWrapper>;
