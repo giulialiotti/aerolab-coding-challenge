@@ -1,14 +1,14 @@
 import React from "react";
 
-// styles
+// Styles
 import styled from "styled-components";
-import { styles, typographys } from "../../styles";
+import { styles, typographys } from "styles";
 
-// assets
-import { icons } from "../../assets";
+// Local Components
+import { FlexSpaceBetween, SelectorButton, CTAButton } from "components";
 
-// components
-import { FlexSpaceBetween, SelectorButton, CTAButton } from "../../components";
+// Assets
+import { icons } from "assets";
 
 const { TextL1, TextL2 } = typographys;
 

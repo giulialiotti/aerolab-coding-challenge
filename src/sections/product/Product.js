@@ -1,17 +1,17 @@
 import React from "react";
 
-// styles
+// Styles
 import styled from "styled-components";
-import { breakpoints } from "../../styles";
+import { breakpoints } from "styles";
 
-// self components
+// Self Components
 import { TitleAndControls } from "./TitleAndControls";
 import { Products } from "./Products";
 
-// functions
-import { getData, sortProducts } from "../../utils/functions";
+// Utils
+import { getData, sortProducts } from "utils/functions";
 
-// products endpoint
+// Products endpoint
 const productsUrl = "https://coding-challenge-api.aerolab.co/products";
 
 export const Product = () => {

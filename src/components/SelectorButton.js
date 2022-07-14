@@ -1,5 +1,6 @@
+// Styles
 import styled from "styled-components";
-import { styles, breakpoints } from "../styles";
+import { styles, breakpoints } from "styles";
 
 export const SelectorButton = ({ isNumber, selected, children, ...props }) => {
   return (

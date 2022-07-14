@@ -1,11 +1,11 @@
-// styles
+// Styles
 import styled from "styled-components";
-import { styles, breakpoints, typographys } from "../../styles";
+import { styles, breakpoints, typographys } from "styles";
 
-// components
-import { LandingCTA } from "../../components";
+// Local Components
+import { LandingCTA } from "components";
 
-// destructuring type styles
+// Destructuring type styles
 const { TextL1AllCaps, TitleL1, TextL1 } = typographys;
 
 export const LandingCopy = () => {

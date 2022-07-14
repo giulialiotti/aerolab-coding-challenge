@@ -1,14 +1,14 @@
 import React, { useContext } from "react";
 
-// context
-import { UserContext } from "../../context/UserContext";
+// Context
+import { UserContext } from "context/UserContext";
 
-// styles
+// Styles
 import styled from "styled-components";
-import { styles, typographys, breakpoints } from "../../styles";
+import { styles, typographys, breakpoints } from "styles";
 
-// components
-import { CTAButton } from "../../components/CTAButton";
+// Local Components
+import { CTAButton } from "components";
 
 const { TextL1, TextL2AllCaps } = typographys;
 const { colors } = styles;

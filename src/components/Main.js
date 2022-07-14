@@ -1,3 +1,4 @@
+// Styles
 import styled from "styled-components";
 
 export const Main = ({ children }) => {

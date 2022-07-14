@@ -1,8 +1,8 @@
 import React from "react";
 
-// styles
+// Styles
 import styled from "styled-components";
-import { breakpoints } from "../styles";
+import { breakpoints } from "styles";
 
 export const Section = ({ children, ...props }) => {
   return <SectionWrapper {...props}>{children}</SectionWrapper>;

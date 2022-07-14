@@ -1,6 +1,8 @@
+// Styles
 import styled from "styled-components";
-import { styles, typographys } from "../../styles";
+import { styles, typographys } from "styles";
 
+// Self Components
 import { FilterSortPager } from "./FilterSortPager";
 
 export const TitleAndControls = ({ categories, buttonsState }) => {

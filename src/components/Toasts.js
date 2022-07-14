@@ -1,13 +1,13 @@
 import React, { useContext } from "react";
 
-// context
-import { UserContext } from "../context/UserContext";
+// Context
+import { UserContext } from "context/UserContext";
 
-// styles
+// Styles
 import styled from "styled-components";
-import { styles, breakpoints, typographys } from "../styles";
+import { styles, breakpoints, typographys } from "styles";
 
-// assets
+// Assets
 import { icons } from "../assets";
 
 const { TextL1 } = typographys;

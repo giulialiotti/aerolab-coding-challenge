@@ -1,9 +1,9 @@
-// styles
+// Styles
 import styled from "styled-components";
-import { styles, breakpoints } from "../../styles";
+import { styles, breakpoints } from "styles";
 
-// assets
-import { icons } from "../../assets";
+// Assets
+import { icons } from "assets";
 
 export const Footer = () => {
   return (

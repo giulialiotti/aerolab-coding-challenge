@@ -1,17 +1,17 @@
 import React, { useContext } from "react";
 
-// context
-import { UserContext } from "../../context/UserContext";
+// Context
+import { UserContext } from "context/UserContext";
 
-// styles
+// Styles
 import styled from "styled-components";
-import { styles, breakpoints, typographys } from "../../styles";
+import { styles, breakpoints, typographys } from "styles";
 
-// assets
-import { logos, icons } from "../../assets";
-
-// self components
+// Self Components
 import { Aeropay } from "./Aeropay";
+
+// Assets
+import { logos, icons } from "assets";
 
 export const Navbar = () => {
   const { user, handleAddPoints } = useContext(UserContext);

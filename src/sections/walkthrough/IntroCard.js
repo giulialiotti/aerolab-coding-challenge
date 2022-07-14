@@ -1,8 +1,8 @@
-// styles
+// Styles
 import styled from "styled-components";
-import { styles, breakpoints, typographys } from "../../styles";
+import { styles, breakpoints, typographys } from "styles";
 
-// destructuring type styles
+// Destructuring type styles
 const { TitleL3, TextL1 } = typographys;
 
 export const IntroCard = ({

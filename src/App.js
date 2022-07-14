@@ -1,8 +1,13 @@
+// Context
 import { UserProvider } from "./context/UserContext";
+
+// Sections
 import { Navbar, Hero, Product, Walkthrough, Footer } from "./sections";
+
+// Local Components
 import { Main, Toasts } from "./components";
 
-// gsap
+// GSAP
 import { gsap } from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 

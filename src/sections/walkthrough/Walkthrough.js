@@ -1,16 +1,16 @@
 import React from "react";
 
-// styles
+// Styles
 import styled from "styled-components";
-import { styles, breakpoints } from "../../styles";
+import { styles, breakpoints } from "styles";
 
-// self components
+// Self Components
 import { IntroCard } from "./IntroCard";
 
-// assets
-import { illustrations, icons } from "../../assets";
+// Assets
+import { illustrations, icons } from "assets";
 
-// animation
+// Animation
 // import { animateWalkthroughCards } from "./animations";
 
 export const Walkthrough = () => {

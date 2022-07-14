@@ -1,10 +1,10 @@
 import React from "react";
 
-// styles
+// Styles
 import styled from "styled-components";
-import { breakpoints } from "../../styles";
+import { breakpoints } from "styles";
 
-// components
+// Self Components
 import { ProductCard } from "./ProductCard";
 
 export const Products = ({ products }) => {

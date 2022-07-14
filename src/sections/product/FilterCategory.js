@@ -1,8 +1,8 @@
 import React from "react";
 
-// styles
+// Styles
 import styled from "styled-components";
-import { styles, typographys, breakpoints } from "../../styles";
+import { styles, typographys, breakpoints } from "styles";
 
 const { TextL1 } = typographys;
 

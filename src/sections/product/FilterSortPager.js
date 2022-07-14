@@ -1,11 +1,11 @@
-// styles
+// Styles
 import styled from "styled-components";
-import { styles, breakpoints, typographys } from "../../styles";
+import { styles, breakpoints, typographys } from "styles";
 
-// components
-import { SelectorButton } from "../../components";
+// Local Components
+import { SelectorButton } from "components";
 
-// self components
+// Self components
 import { FilterCategory } from "./FilterCategory";
 
 const { TextL1 } = typographys;

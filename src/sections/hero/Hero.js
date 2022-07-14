@@ -1,12 +1,12 @@
-// styles
+// Styles
 import styled from "styled-components";
-import { styles, breakpoints } from "../../styles";
+import { styles, breakpoints } from "styles";
 
-// self components
+// Self components
 import { LandingCopy } from "./LandingCopy";
 
-// assets
-import { icons, illustrations } from "../../assets";
+// Assets
+import { icons, illustrations } from "assets";
 
 export const Hero = () => {
   return (
