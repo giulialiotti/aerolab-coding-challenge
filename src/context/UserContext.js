@@ -1,7 +1,7 @@
 import React, { createContext } from "react";
 
 // functions
-import { getData, addItem } from "../functions";
+import { getData, addItem } from "../utils/functions";
 
 // user endpoint
 const userUrl = "https://coding-challenge-api.aerolab.co/user/me";

@@ -11,7 +11,7 @@ import { IntroCard } from "./IntroCard";
 import { illustrations, icons } from "../../assets";
 
 // animation
-// import { animateWalkthroughCards } from "../../animations";
+// import { animateWalkthroughCards } from "./animations";
 
 export const Walkthrough = () => {
   const cardsWrapperRef = React.useRef(null);

@@ -9,7 +9,7 @@ import { TitleAndControls } from "./TitleAndControls";
 import { Products } from "./Products";
 
 // functions
-import { getData, sortProducts } from "../../functions";
+import { getData, sortProducts } from "../../utils/functions";
 
 // products endpoint
 const productsUrl = "https://coding-challenge-api.aerolab.co/products";
