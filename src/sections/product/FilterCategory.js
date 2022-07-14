@@ -7,6 +7,9 @@ import { styles, typographys, breakpoints } from "styles";
 // Context
 import { useProductsContext } from "context/ProductsContext";
 
+// Assets
+import { icons } from "assets";
+
 const { TextL1 } = typographys;
 
 export const FilterCategory = () => {
@@ -19,11 +22,11 @@ export const FilterCategory = () => {
   const handleOpenList = () => {
     if (showList) {
       // handle close
-      arrowRef.current.style.transform = "rotate(0)";
+      arrowRef.current.style.transform = "rotate(90deg)";
       setShowList(!showList);
       // handle open
     } else {
-      arrowRef.current.style.transform = "rotate(180deg)";
+      arrowRef.current.style.transform = "rotate(270deg)";
       setShowList(!showList);
     }
   };
@@ -33,7 +36,9 @@ export const FilterCategory = () => {
       <SortTitle color={styles.colors.neutrals.six}>Filter by:</SortTitle>
       <Filter onClick={handleOpenList}>
         All products
-        <Icon ref={arrowRef} />
+        <ArrowIcon ref={arrowRef}>
+          <img src={icons.arrowNextIcon} alt="Arrow down icon" />
+        </ArrowIcon>
       </Filter>
       {showList && categories && (
         <CategoriesList>
@@ -94,13 +99,10 @@ const Filter = styled.button`
   }
 `;
 
-const Icon = styled.span`
-  background-color: #000000;
-  clip-path: polygon(50% 100%, 0 0, 100% 0);
-  display: inline-block;
+const ArrowIcon = styled.span`
+  display: flex;
+  transform: rotate(90deg);
   transition: transform 0.3s ease-in-out;
-  height: 8px;
-  width: 8px;
 `;
 
 const CategoriesList = styled.ul`
