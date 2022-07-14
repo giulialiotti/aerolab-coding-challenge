@@ -42,18 +42,15 @@ export const UserProvider = ({ children }) => {
     });
   };
 
-  return (
-    <UserContext.Provider
-      value={{
-        user,
-        setUser,
-        handleAddPoints,
-        handleRedeemProduct,
-        addItemSucces,
-        setAddItemSucces,
-      }}
-    >
-      {children}
-    </UserContext.Provider>
-  );
+  // Value
+  const value = {
+    user,
+    setUser,
+    handleAddPoints,
+    handleRedeemProduct,
+    addItemSucces,
+    setAddItemSucces,
+  };
+
+  return <UserContext.Provider value={value}>{children}</UserContext.Provider>;
 };
