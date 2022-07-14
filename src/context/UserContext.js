@@ -12,6 +12,8 @@ const redeemProductUrl = "https://coding-challenge-api.aerolab.co/redeem";
 
 export const UserContext = createContext();
 
+export const useUserContext = () => React.useContext(UserContext);
+
 export const UserProvider = ({ children }) => {
   const [user, setUser] = React.useState({});
   const [addItemSucces, setAddItemSucces] = React.useState(false);

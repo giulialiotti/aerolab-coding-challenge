@@ -1,7 +1,7 @@
-import React, { useContext } from "react";
+import React from "react";
 
 // Context
-import { UserContext } from "context/UserContext";
+import { useUserContext } from "context/UserContext";
 
 // Styles
 import styled from "styled-components";
@@ -13,7 +13,7 @@ import { icons } from "../assets";
 const { TextL1 } = typographys;
 
 export const Toasts = () => {
-  const { addItemSucces, setAddItemSucces } = useContext(UserContext);
+  const { addItemSucces, setAddItemSucces } = useUserContext();
 
   const [showToast, setShowToast] = React.useState(false);
 

@@ -1,7 +1,7 @@
-import React, { useContext } from "react";
+import React from "react";
 
 // Context
-import { UserContext } from "context/UserContext";
+import { useUserContext } from "context/UserContext";
 
 // Styles
 import styled from "styled-components";
@@ -16,7 +16,7 @@ const { colors } = styles;
 export const ProductCard = ({
   product: { _id, name, category, img, cost },
 }) => {
-  const { user, setUser, handleRedeemProduct } = useContext(UserContext);
+  const { user, setUser, handleRedeemProduct } = useUserContext();
 
   const canAfford = cost <= user.points;
   const amountMissing = cost - user.points;

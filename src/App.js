@@ -1,11 +1,11 @@
 // Context
-import { UserProvider } from "./context/UserContext";
+import { UserProvider } from "context/UserContext";
 
 // Sections
-import { Navbar, Hero, Product, Walkthrough, Footer } from "./sections";
+import { Navbar, Hero, Product, Walkthrough, Footer } from "sections";
 
 // Local Components
-import { Main, Toasts } from "./components";
+import { Main, Toasts } from "components";
 
 // GSAP
 import { gsap } from "gsap";

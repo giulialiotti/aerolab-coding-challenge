@@ -1,7 +1,7 @@
-import React, { useContext } from "react";
+import React from "react";
 
 // Context
-import { UserContext } from "context/UserContext";
+import { useUserContext } from "context/UserContext";
 
 // Styles
 import styled from "styled-components";
@@ -14,7 +14,7 @@ import { Aeropay } from "./Aeropay";
 import { logos, icons } from "assets";
 
 export const Navbar = () => {
-  const { user, handleAddPoints } = useContext(UserContext);
+  const { user, handleAddPoints } = useUserContext();
 
   const [showAeropay, setShowAeropay] = React.useState(false);
 
