@@ -7,38 +7,13 @@ import { styles, typographys } from "styles";
 // Local Components
 import { FlexSpaceBetween, SelectorButton, CTAButton } from "components";
 
+// Utils
+import { points, months } from "utils";
+
 // Assets
 import { icons } from "assets";
 
 const { TextL1, TextL2 } = typographys;
-
-// Variables
-// Amounts for post request
-let points = [
-  {
-    amount: 1000,
-  },
-  {
-    amount: 5000,
-  },
-  {
-    amount: 7500,
-  },
-];
-let months = [
-  "01",
-  "02",
-  "03",
-  "04",
-  "05",
-  "06",
-  "07",
-  "08",
-  "09",
-  "10",
-  "11",
-  "12",
-];
 
 export const Aeropay = ({
   userData: { name, createDate },

@@ -1,14 +1,13 @@
 import React, { createContext } from "react";
 
 // Functions
-import { getData, addItem } from "utils/functions";
-
-// User endpoint
-const userUrl = "https://coding-challenge-api.aerolab.co/user/me";
-// Add points endpoint
-const addPointsUrl = "https://coding-challenge-api.aerolab.co/user/points";
-// Redeem product endpoint
-const redeemProductUrl = "https://coding-challenge-api.aerolab.co/redeem";
+import {
+  getData,
+  addItem,
+  userUrl,
+  addPointsUrl,
+  redeemProductUrl,
+} from "utils";
 
 export const UserContext = createContext();
 
