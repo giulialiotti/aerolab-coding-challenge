@@ -39,4 +39,24 @@ const months = [
   "12",
 ];
 
-export { userUrl, addPointsUrl, redeemProductUrl, productsUrl, points, months };
+const sortButtons = [
+  {
+    order: "Most Recent",
+  },
+  {
+    order: "Lowest Price",
+  },
+  {
+    order: "Highest Price",
+  },
+];
+
+export {
+  userUrl,
+  addPointsUrl,
+  redeemProductUrl,
+  productsUrl,
+  points,
+  months,
+  sortButtons,
+};

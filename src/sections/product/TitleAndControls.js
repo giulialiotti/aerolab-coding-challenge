@@ -5,15 +5,15 @@ import { styles, typographys } from "styles";
 // Self Components
 import { FilterSortPager } from "./FilterSortPager";
 
-export const TitleAndControls = ({ categories, buttonsState }) => {
-  const { TitleL2 } = typographys;
+const { TitleL2 } = typographys;
 
+export const TitleAndControls = () => {
   return (
     <Wrapper>
       <TitleL2>
         <SpanBlue>Tech</SpanBlue> Products
       </TitleL2>
-      <FilterSortPager categories={categories} buttonsState={buttonsState} />
+      <FilterSortPager />
     </Wrapper>
   );
 };

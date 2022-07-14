@@ -8,43 +8,35 @@ import { SelectorButton } from "components";
 // Self components
 import { FilterCategory } from "./FilterCategory";
 
+// Context
+import { useProductsContext } from "context/ProductsContext";
+
+// Utils
+import { sortButtons } from "utils";
+
 const { TextL1 } = typographys;
 
-export const FilterSortPager = ({ categories, buttonsState }) => {
-  const { sortButtons, setSortButtons } = buttonsState;
-
-  const handleClick = (valueOne, valueTwo, valueThree) => {
-    setSortButtons({
-      mostRecent: valueOne,
-      lowestPrice: valueTwo,
-      highestPrice: valueThree,
-    });
-  };
+export const FilterSortPager = () => {
+  const { activeSortButton, setActiveSortButton } = useProductsContext();
 
   return (
     <Wrapper>
-      <FilterCategory categories={categories} />
+      <FilterCategory />
       <Divider />
       <SortWrapper>
         <SortTitle color={styles.colors.neutrals.six}>Sort by:</SortTitle>
-        <StyledButton
-          selected={sortButtons.mostRecent}
-          onClick={() => handleClick(true, false, false)}
-        >
-          Most Recent
-        </StyledButton>
-        <StyledButton
-          selected={sortButtons.lowestPrice}
-          onClick={() => handleClick(false, true, false)}
-        >
-          Lowest Price
-        </StyledButton>
-        <SelectorButton
-          selected={sortButtons.highestPrice}
-          onClick={() => handleClick(false, false, true)}
-        >
-          Highest Price
-        </SelectorButton>
+        {sortButtons.map((button) => {
+          const isActive = activeSortButton === button.order;
+          return (
+            <StyledButton
+              key={button.order}
+              selected={isActive ? true : false}
+              onClick={() => setActiveSortButton(button.order)}
+            >
+              {button.order}
+            </StyledButton>
+          );
+        })}
       </SortWrapper>
     </Wrapper>
   );

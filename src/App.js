@@ -1,5 +1,6 @@
 // Context
 import { UserProvider } from "context/UserContext";
+import { ProductsProvider } from "context/ProductsContext";
 
 // Sections
 import { Navbar, Hero, Product, Walkthrough, Footer } from "sections";
@@ -17,14 +18,16 @@ function App() {
   return (
     <>
       <UserProvider>
-        <Navbar />
-        <Main>
-          <Hero />
-          <Walkthrough />
-          <Product />
-          <Toasts />
-        </Main>
-        <Footer />
+        <ProductsProvider>
+          <Navbar />
+          <Main>
+            <Hero />
+            <Walkthrough />
+            <Product />
+            <Toasts />
+          </Main>
+          <Footer />
+        </ProductsProvider>
       </UserProvider>
     </>
   );

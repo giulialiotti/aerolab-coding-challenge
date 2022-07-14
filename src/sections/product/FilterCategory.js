@@ -4,9 +4,14 @@ import React from "react";
 import styled from "styled-components";
 import { styles, typographys, breakpoints } from "styles";
 
+// Context
+import { useProductsContext } from "context/ProductsContext";
+
 const { TextL1 } = typographys;
 
-export const FilterCategory = ({ categories }) => {
+export const FilterCategory = () => {
+  const { categories } = useProductsContext();
+
   const [showList, setShowList] = React.useState(false);
 
   const arrowRef = React.useRef(null);
@@ -30,7 +35,7 @@ export const FilterCategory = ({ categories }) => {
         All products
         <Icon ref={arrowRef} />
       </Filter>
-      {showList && (
+      {showList && categories && (
         <CategoriesList>
           {categories.map((category) => {
             return <CategoriesItem key={category}>{category}</CategoriesItem>;

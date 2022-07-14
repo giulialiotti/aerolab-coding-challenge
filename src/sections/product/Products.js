@@ -1,5 +1,8 @@
 import React from "react";
 
+// Context
+import { useProductsContext } from "context/ProductsContext";
+
 // Styles
 import styled from "styled-components";
 import { breakpoints } from "styles";
@@ -7,7 +10,9 @@ import { breakpoints } from "styles";
 // Self Components
 import { ProductCard } from "./ProductCard";
 
-export const Products = ({ products }) => {
+export const Products = () => {
+  const { products } = useProductsContext();
+
   return (
     <Wrapper>
       {products &&
