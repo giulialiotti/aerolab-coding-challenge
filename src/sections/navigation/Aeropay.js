@@ -12,42 +12,54 @@ import { icons } from "assets";
 
 const { TextL1, TextL2 } = typographys;
 
+// Variables
+// Amounts for post request
+let points = [
+  {
+    amount: 1000,
+  },
+  {
+    amount: 5000,
+  },
+  {
+    amount: 7500,
+  },
+];
+let months = [
+  "01",
+  "02",
+  "03",
+  "04",
+  "05",
+  "06",
+  "07",
+  "08",
+  "09",
+  "10",
+  "11",
+  "12",
+];
+
 export const Aeropay = ({
   userData: { name, createDate },
   handleAddPoints,
 }) => {
   // Clean date
   let date = new Date(createDate);
-  let months = [
-    "01",
-    "02",
-    "03",
-    "04",
-    "05",
-    "06",
-    "07",
-    "08",
-    "09",
-    "10",
-    "11",
-    "12",
-  ];
   let monthIndex = date.getMonth();
   let month = months[monthIndex];
   let year = date.getFullYear().toString().slice(-2);
 
-  // Amounts for post request
-  let body = [
-    {
-      amount: 1000,
-    },
-    {
-      amount: 5000,
-    },
-    {
-      amount: 7500,
-    },
-  ];
+  // Active amount state
+  const [pointsAmount, setPointsAmount] = React.useState({
+    amount: points[1].amount,
+  });
+
+  const handleSelectAmount = (item) => {
+    setPointsAmount({
+      amount: item.amount,
+    });
+  };
 
   return (
     <Wrapper>
@@ -73,20 +85,25 @@ export const Aeropay = ({
           </Waves>
         </AeroCardWrapper>
         <AmountsWrapper>
-          {body.map((item, index) => {
+          {points.map((item) => {
+            const isActive = pointsAmount.amount === item.amount;
+
             return (
               <SelectorButton
                 key={item.amount}
                 isNumber
-                selected={index === 1 ? true : false}
-                onClick={() => handleAddPoints(item, item.amount)}
+                selected={isActive ? true : false}
+                onClick={() => handleSelectAmount(item)}
               >
                 {item.amount}
               </SelectorButton>
             );
           })}
         </AmountsWrapper>
-        <AddPointsButton text="Add Points" />
+        <AddPointsButton
+          text="Add Points"
+          onClick={() => handleAddPoints(pointsAmount)}
+        />
       </Content>
     </Wrapper>
   );

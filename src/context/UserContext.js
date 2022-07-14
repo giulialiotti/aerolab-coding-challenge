@@ -26,9 +26,9 @@ export const UserProvider = ({ children }) => {
   }, []);
 
   // Adding points and refresh user
-  const handleAddPoints = (body, amount) => {
-    addItem(body, addPointsUrl).then((points) => {
-      setUser({ ...user, points: user.points + amount });
+  const handleAddPoints = (item) => {
+    addItem(item, addPointsUrl).then((points) => {
+      setUser({ ...user, points: user.points + item.amount });
       console.log(points);
     });
   };
