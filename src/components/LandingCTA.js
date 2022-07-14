@@ -36,7 +36,7 @@ const Link = styled.a`
     background: ${styles.gradients.brand.hover};
   }
 
-  ${breakpoints.desktop} {
+  ${breakpoints.desktopXL} {
     border-radius: 16px;
     font-size: 18px;
     padding: 24px 40px;
@@ -48,7 +48,7 @@ const ArrowIcon = styled.img`
   margin-left: 10.38px;
   width: 10.69px;
 
-  ${breakpoints.desktop} {
+  ${breakpoints.desktopXL} {
     margin-left: 12.5px;
     width: 14.25px;
   }

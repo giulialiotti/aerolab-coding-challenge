@@ -52,7 +52,7 @@ const Wrapper = styled.div`
     width: min-content;
   }
 
-  ${breakpoints.desktop} {
+  ${breakpoints.desktopXL} {
     width: auto;
   }
 `;
@@ -60,7 +60,7 @@ const Wrapper = styled.div`
 const SortTitle = styled(TextL1)`
   display: none;
 
-  ${breakpoints.desktop} {
+  ${breakpoints.desktopXL} {
     display: block;
     margin-right: 16px;
   }
@@ -86,7 +86,7 @@ const Filter = styled.button`
     width: 256px;
   }
 
-  ${breakpoints.desktop} {
+  ${breakpoints.desktopXL} {
     font-size: 18px;
   }
 `;
@@ -129,7 +129,7 @@ const CategoriesItem = styled.li`
     background: ${styles.colors.neutrals.one};
   }
 
-  ${breakpoints.desktop} {
+  ${breakpoints.desktopXL} {
     font-size: 18px;
   }
 `;

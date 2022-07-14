@@ -70,7 +70,7 @@ const SectionWrapper = styled.section`
     margin-top: 170px;
   }
 
-  ${breakpoints.desktop} {
+  ${breakpoints.desktopXL} {
     padding-left: 12%;
     padding-right: 12%;
     margin-top: 160px;

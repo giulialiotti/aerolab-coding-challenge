@@ -39,7 +39,7 @@ const HeroWrapper = styled.header`
     padding-right: 1.7%;
   }
 
-  ${breakpoints.desktop} {
+  ${breakpoints.desktopXL} {
     display: flex;
     align-items: end;
     justify-content: space-between;
@@ -58,7 +58,7 @@ const IllustrationWrapper = styled.div`
     width: min-content;
   }
 
-  ${breakpoints.desktop} {
+  ${breakpoints.desktopXL} {
     margin: 0;
   }
 `;
@@ -82,7 +82,7 @@ const ImageWrapper = styled.div`
     width: 580px;
   }
 
-  ${breakpoints.desktop} {
+  ${breakpoints.desktopXL} {
     transform: unset;
     height: 795px;
     width: 897px;
@@ -92,7 +92,7 @@ const ImageWrapper = styled.div`
 const IllustrationBG = styled.div`
   display: none;
 
-  ${breakpoints.desktop} {
+  ${breakpoints.desktopXL} {
     display: block;
     border-radius: 104px;
     background: ${styles.gradients.specials.sectionBg};
@@ -139,7 +139,7 @@ const Waves = styled.div`
     }
   }
 
-  ${breakpoints.desktop} {
+  ${breakpoints.desktopXL} {
     top: 14.5%;
 
     img:nth-child(4) {

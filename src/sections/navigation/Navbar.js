@@ -71,7 +71,7 @@ const Wrapper = styled.nav`
   display: flex;
   align-items: center;
   justify-content: space-between;
-  padding: 40px 5.3%;
+  padding: 24px 5.3%;
   position: fixed;
   top: 0;
   left: 0;
@@ -79,10 +79,10 @@ const Wrapper = styled.nav`
   z-index: 10;
 
   ${breakpoints.tablet} {
-    padding: 46px 4.3%;
+    padding: 32px 4.3%;
   }
 
-  ${breakpoints.desktop} {
+  ${breakpoints.desktopXL} {
     padding: 40px 12%;
   }
 `;
@@ -98,7 +98,7 @@ const LogoWrapper = styled.div`
     max-width: 100%;
   }  
 
-  ${breakpoints.desktop} {
+  ${breakpoints.desktopXL} {
     width: 126px;
 
     .logo-mobile {
@@ -132,7 +132,7 @@ const AeroIconWrapper = styled.div`
     max-width: 100%;
   }
 
-  ${breakpoints.desktop} {
+  ${breakpoints.desktopXL} {
     height: 32px;
     width: 32px;
   }

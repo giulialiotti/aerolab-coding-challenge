@@ -35,7 +35,7 @@ const Wrapper = styled.div`
   margin: 0 auto;
   width: min-content;
 
-  ${breakpoints.desktop} {
+  ${breakpoints.desktopXL} {
     display: block;
     margin: 0 0 29px;
   }
@@ -44,7 +44,7 @@ const Wrapper = styled.div`
 const Label = styled(TextL1AllCaps)`
   text-align: center;
 
-  ${breakpoints.desktop} {
+  ${breakpoints.desktopXL} {
     text-align: left;
   }
 `;
@@ -53,7 +53,7 @@ const Title = styled(TitleL1)`
   text-align: center;
   margin-top: 8px;
 
-  ${breakpoints.desktop} {
+  ${breakpoints.desktopXL} {
     text-align: left;
   }
 `;
@@ -69,7 +69,7 @@ const Text = styled(TextL1)`
   text-align: center;
   margin-top: 24px;
 
-  ${breakpoints.desktop} {
+  ${breakpoints.desktopXL} {
     text-align: left;
   }
 `;

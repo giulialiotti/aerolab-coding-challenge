@@ -43,7 +43,7 @@ const StyledButton = styled.button`
     z-index: -1;
   }
 
-  ${breakpoints.desktop} {
+  ${breakpoints.desktopXL} {
     font-size: 18px;
   }
 `;

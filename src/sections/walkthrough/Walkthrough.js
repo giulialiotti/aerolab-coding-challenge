@@ -12,7 +12,7 @@ import { illustrations, icons } from "../../assets";
 import { styles } from "../../styles";
 
 // animation
-import { animateWalkthroughCards } from "../../animations";
+// import { animateWalkthroughCards } from "../../animations";
 
 export const Walkthrough = () => {
   const cardsWrapperRef = React.useRef(null);
@@ -21,11 +21,11 @@ export const Walkthrough = () => {
   const cardThreeRef = React.useRef(null);
 
   // Cards animation only for desktop breakpoint
-  React.useLayoutEffect(() => {
-    if (window.innerWidth >= 1920) {
-      animateWalkthroughCards(cardsWrapperRef, cardOneRef, cardThreeRef);
-    }
-  }, []);
+  // React.useLayoutEffect(() => {
+  //   if (window.innerWidth >= 1920) {
+  //     animateWalkthroughCards(cardsWrapperRef, cardOneRef, cardThreeRef);
+  //   }
+  // }, []);
 
   return (
     <Wrapper id="walkthrough">
@@ -73,7 +73,7 @@ const Wrapper = styled.section`
     padding-right: 1.7%;
   }
 
-  ${breakpoints.desktop} {
+  ${breakpoints.desktopXL} {
     padding-left: 0;
     padding-right: 0;
     margin-top: 112px;
@@ -94,7 +94,7 @@ const Background = styled.div`
     width: 100%;
   }
 
-  ${breakpoints.desktop} {
+  ${breakpoints.desktopXL} {
     top: 50%;
     bottom: unset;
     transform: translateY(-50%);
@@ -110,7 +110,7 @@ const CardsWrapper = styled.div`
     align-items: center;
   }
 
-  ${breakpoints.desktop} {
+  ${breakpoints.desktopXL} {
     margin: 0 auto;
     width: max-content;
   }
@@ -119,7 +119,7 @@ const CardsWrapper = styled.div`
 const FirstCard = styled(IntroCard)`
   z-index: 1;
 
-  ${breakpoints.desktop} {
+  ${breakpoints.desktopXL} {
     transform: rotate(-3deg) translateX(16%);
     will-change: transform;
   }
@@ -133,7 +133,7 @@ const SecondCard = styled(IntroCard)`
     z-index: 2;
   }
 
-  ${breakpoints.desktop} {
+  ${breakpoints.desktopXL} {
     transform: translateY(-6%);
     will-change: transform;
   }
@@ -146,7 +146,7 @@ const ThirdCard = styled(IntroCard)`
     margin-top: 0;
   }
 
-  ${breakpoints.desktop} {
+  ${breakpoints.desktopXL} {
     transform: rotate(3deg) translateX(-16%);
     will-change: transform;
     z-index: 3;

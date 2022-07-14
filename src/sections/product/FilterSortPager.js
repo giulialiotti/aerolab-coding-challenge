@@ -59,7 +59,7 @@ const Wrapper = styled.div`
     margin-top: 42px;
   }
 
-  ${breakpoints.desktop} {
+  ${breakpoints.desktopXL} {
     display: flex;
     margin-top: 40px;
   }
@@ -74,7 +74,7 @@ const SortWrapper = styled.div`
     margin-top: 26.5px;
   }
   
-  ${breakpoints.desktop} {
+  ${breakpoints.desktopXL} {
     margin-top: 0;
   }
 `;
@@ -82,7 +82,7 @@ const SortWrapper = styled.div`
 const SortTitle = styled(TextL1)`
   display: none;
 
-  ${breakpoints.desktop} {
+  ${breakpoints.desktopXL} {
     margin-right: 16px;
   }
 `;
@@ -94,7 +94,7 @@ const StyledButton = styled(SelectorButton)`
 const Divider = styled.div`
   display: none;
 
-  ${breakpoints.desktop} {
+  ${breakpoints.desktopXL} {
     display: block;
     background-color: ${styles.colors.neutrals.three};
     margin: 0px 40px;

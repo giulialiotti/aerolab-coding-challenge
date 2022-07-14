@@ -60,7 +60,7 @@ const StyledButton = styled.button`
         : null};
   }
 
-  ${breakpoints.desktop} {
+  ${breakpoints.desktopXL} {
     font-size: 18px;
   }
 `;

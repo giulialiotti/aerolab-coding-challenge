@@ -77,7 +77,7 @@ const ImgWrapper = styled.div`
     padding: 64px 16px;
   }
 
-  ${breakpoints.desktop} {
+  ${breakpoints.desktopXL} {
     padding: 64px 34px 76.9px;
   }
 `;

@@ -31,7 +31,7 @@ const Wrapper = styled.footer`
     margin-top: 160px;
   }
 
-  ${breakpoints.desktop} {
+  ${breakpoints.desktopXL} {
     padding: 80px 0;
   }
 `;
@@ -46,7 +46,7 @@ const LinkWrapper = styled.a`
   color: ${styles.colors.neutrals.six};
   text-decoration: none;
 
-  ${breakpoints.desktop} {
+  ${breakpoints.desktopXL} {
     font-size: 18px;
   }
 `;

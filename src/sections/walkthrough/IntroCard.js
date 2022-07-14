@@ -48,7 +48,7 @@ const Wrapper = styled.div`
     width: 32.5%;
   }
 
-  ${breakpoints.desktop} {
+  ${breakpoints.desktopXL} {
     background-color: ${styles.colors.neutrals.cero};
     width: 532px;
   }
@@ -67,7 +67,7 @@ const TopCard = styled.div`
     max-height: 100%;
   }
 
-  ${breakpoints.desktop} {
+  ${breakpoints.desktopXL} {
     height: 498px;
   }
 `;
@@ -79,7 +79,7 @@ const BottomCard = styled.div`
   padding: 16px 24px 24px;
   width: 100%;
 
-  ${breakpoints.desktop} {
+  ${breakpoints.desktopXL} {
     padding: 16px 115px 24px 24px;
   }
 `;
@@ -102,7 +102,7 @@ const Icon = styled.div`
     height: 100%;
   }
 
-  ${breakpoints.desktop} {
+  ${breakpoints.desktopXL} {
     padding: 8px;
     height: 48px;
     width: 48px;

@@ -12,7 +12,7 @@ const TitleL1 = styled.h1`
   text-transform: uppercase;
   color: ${props => props.color || styles.colors.neutrals.nine};
 
-  ${breakpoints.desktop} {
+  ${breakpoints.desktopXL} {
     font-size: 200px;
   } 
 `;
@@ -25,7 +25,7 @@ const TitleL2 = styled.h2`
   text-transform: uppercase;
   color: ${props => props.color || styles.colors.neutrals.nine};
 
-  ${breakpoints.desktop} {
+  ${breakpoints.desktopXL} {
     font-size: 48px;
   } 
 `;
@@ -38,7 +38,7 @@ const TitleL3 = styled.h3`
   text-transform: uppercase;
   color: ${props => props.color || styles.colors.neutrals.nine};
 
-  ${breakpoints.desktop} {
+  ${breakpoints.desktopXL} {
     font-size: 32px;
   } 
 `;
@@ -52,7 +52,7 @@ const TextL1 = styled.p`
   line-height: 150%;
   color: ${props => props.color || styles.colors.neutrals.nine};
 
-  ${breakpoints.desktop} {
+  ${breakpoints.desktopXL} {
     font-size: 18px;
   } 
 `;
@@ -66,7 +66,7 @@ const TextL1AllCaps = styled.p`
   text-transform: uppercase;
   color: ${props => props.color || styles.colors.neutrals.nine};
 
-  ${breakpoints.desktop} {
+  ${breakpoints.desktopXL} {
     font-size: 18px;
   } 
 `;
@@ -78,7 +78,7 @@ const TextL1Light = styled.p`
   line-height: 150%;
   color: ${props => props.color || styles.colors.neutrals.nine};
 
-  ${breakpoints.desktop} {
+  ${breakpoints.desktopXL} {
     font-size: 18px;
   } 
 `;
@@ -90,7 +90,7 @@ const TextL2 = styled.p`
   line-height: 150%;
   color: ${props => props.color || styles.colors.neutrals.nine};
 
-  ${breakpoints.desktop} {
+  ${breakpoints.desktopXL} {
     font-size: 14px;
   } 
 `;
@@ -103,7 +103,7 @@ const TextL2AllCaps = styled.p`
   text-transform: uppercase;
   color: ${props => props.color || styles.colors.neutrals.nine};
 
-  ${breakpoints.desktop} {
+  ${breakpoints.desktopXL} {
     font-size: 14px;
     letter-spacing: 5%;
   } 

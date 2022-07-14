@@ -29,7 +29,7 @@ const Wrapper = styled.div`
     grid-gap: 48px 24px;
   }
 
-  ${breakpoints.desktop} {
+  ${breakpoints.desktopXL} {
     grid-template-columns: repeat(4, 1fr);
     grid-gap: 80px 24px;
   }
