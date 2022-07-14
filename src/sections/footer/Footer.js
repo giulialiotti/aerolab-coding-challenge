@@ -26,7 +26,7 @@ const Wrapper = styled.footer`
   padding: 46.5px 0;
   margin-top: 80px;
 
-  ${breakpoints.tablet} {
+  ${breakpoints.tabletLandscape} {
     margin-top: 160px;
   }
 

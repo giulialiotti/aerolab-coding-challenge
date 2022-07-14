@@ -76,7 +76,7 @@ const Wrapper = styled.nav`
   width: 100%;
   z-index: 10;
 
-  ${breakpoints.tablet} {
+  ${breakpoints.tabletLandscape} {
     padding: 32px 4.3%;
   }
 

@@ -70,7 +70,7 @@ const ImgWrapper = styled.div`
     width: 280px;
   }
 
-  ${breakpoints.tablet} {
+  ${breakpoints.tabletLandscape} {
     padding: 64px 16px;
   }
 

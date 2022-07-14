@@ -67,7 +67,7 @@ const Wrapper = styled.section`
   padding-right: 5.3%;
   margin-top: -24px;
 
-  ${breakpoints.tablet} {
+  ${breakpoints.tabletLandscape} {
     padding-left: 1.7%;
     padding-right: 1.7%;
   }
@@ -87,7 +87,7 @@ const Background = styled.div`
   height: 132%;
   width: 100vw;
 
-  ${breakpoints.tablet} {
+  ${breakpoints.tabletLandscape} {
     bottom: -6%;
     height: 142%;
     width: 100%;
@@ -103,7 +103,7 @@ const Background = styled.div`
 `;
 
 const CardsWrapper = styled.div`
-  ${breakpoints.tablet} {
+  ${breakpoints.tabletLandscape} {
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -127,7 +127,7 @@ const FirstCard = styled(IntroCard)`
 const SecondCard = styled(IntroCard)`
   margin-top: 24px;
 
-  ${breakpoints.tablet} {
+  ${breakpoints.tabletLandscape} {
     margin-top: 0;
     z-index: 2;
   }
@@ -141,7 +141,7 @@ const SecondCard = styled(IntroCard)`
 const ThirdCard = styled(IntroCard)`
   margin-top: 24px;
 
-  ${breakpoints.tablet} {
+  ${breakpoints.tabletLandscape} {
     margin-top: 0;
   }
 

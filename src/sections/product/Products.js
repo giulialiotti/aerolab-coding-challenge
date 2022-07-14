@@ -24,7 +24,7 @@ const Wrapper = styled.div`
   grid-gap: 48px 0;
   margin-top: 64px;
 
-  ${breakpoints.tablet} {
+  ${breakpoints.tabletLandscape} {
     grid-template-columns: repeat(3, 1fr);
     grid-gap: 48px 24px;
   }

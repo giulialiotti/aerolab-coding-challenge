@@ -71,7 +71,7 @@ const Wrapper = styled.div`
   width: 90%;
   z-index: 15;
 
-  ${breakpoints.tablet} {
+  ${breakpoints.tabletLandscape} {
     bottom: 40px;
     left: 80px;
     width: 532px;

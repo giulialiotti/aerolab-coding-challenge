@@ -42,7 +42,7 @@ const Wrapper = styled.div`
   position: relative;
   width: 100%;
 
-  ${breakpoints.tablet} {
+  ${breakpoints.tabletLandscape} {
     width: 32.5%;
   }
 

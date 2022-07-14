@@ -46,7 +46,7 @@ const Wrapper = styled.div`
   align-items: center;
   position: relative;
 
-  ${breakpoints.tablet} {
+  ${breakpoints.tabletLandscape} {
     width: min-content;
   }
 
@@ -80,7 +80,7 @@ const Filter = styled.button`
   color: ${styles.colors.neutrals.six};
   width: 100%;
 
-  ${breakpoints.tablet} {
+  ${breakpoints.tabletLandscape} {
     width: 256px;
   }
 
@@ -109,7 +109,7 @@ const CategoriesList = styled.ul`
   width: 100%;
   z-index: 3;
 
-  ${breakpoints.tablet} {
+  ${breakpoints.tabletLandscape} {
     width: 256px;
   }
 `;

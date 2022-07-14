@@ -64,7 +64,7 @@ const SectionWrapper = styled.section`
   padding-right: 5.3%;
   margin-top: 80px;
 
-  ${breakpoints.tablet} {
+  ${breakpoints.tabletLandscape} {
     padding-left: 1.7%;
     padding-right: 1.7%;
     margin-top: 170px;

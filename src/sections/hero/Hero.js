@@ -33,7 +33,7 @@ const HeroWrapper = styled.header`
   padding-left: 5.3%;
   padding-right: 5.3%;
 
-  ${breakpoints.tablet} {
+  ${breakpoints.tabletLandscape} {
     padding-left: 1.7%;
     padding-right: 1.7%;
   }
@@ -52,7 +52,7 @@ const IllustrationWrapper = styled.div`
   position: relative;
   margin: 20px 0 0;
 
-  ${breakpoints.tablet} {
+  ${breakpoints.tabletLandscape} {
     margin: 0 auto;
     width: min-content;
   }
@@ -75,7 +75,7 @@ const ImageWrapper = styled.div`
     height: 100%;
   }
 
-  ${breakpoints.tablet} {
+  ${breakpoints.tabletLandscape} {
     transform: unset;
     height: 518.58px;
     width: 580px;
@@ -122,7 +122,7 @@ const Waves = styled.div`
     display: none;
   }
 
-  ${breakpoints.tablet} {
+  ${breakpoints.tabletLandscape} {
     top: 9.8%;
 
     img {
