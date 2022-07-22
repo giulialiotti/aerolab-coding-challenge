@@ -29,7 +29,6 @@ export const FilterSortPager = () => {
       type: "x",
       bounds: ".sort-buttons",
       zIndexBoost: false,
-      allowEventDefault: true,
     });
   }, []);
 
