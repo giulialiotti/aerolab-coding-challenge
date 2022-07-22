@@ -37,7 +37,7 @@ export const FilterCategory = () => {
   };
 
   return (
-    <Wrapper>
+    <Wrapper className="filter-category">
       <SortTitle color={styles.colors.neutrals.six}>Filter by:</SortTitle>
       <Filter onClick={handleOpenList}>
         {activeFilter}

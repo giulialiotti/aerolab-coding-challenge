@@ -1,3 +1,5 @@
+import React from "react";
+
 // Styles
 import styled from "styled-components";
 import { styles, breakpoints, typographys } from "styles";
@@ -14,29 +16,43 @@ import { useProductsContext } from "context/ProductsContext";
 // Utils
 import { sortButtons } from "utils";
 
+// Animations
+import { Draggable } from "gsap/all";
+
 const { TextL1 } = typographys;
 
 export const FilterSortPager = () => {
   const { activeSortButton, setActiveSortButton } = useProductsContext();
 
+  React.useEffect(() => {
+    Draggable.create(".sort-buttons__inner-wrapper", {
+      type: "x",
+      bounds: ".sort-buttons",
+      zIndexBoost: false,
+      allowEventDefault: true,
+    });
+  }, []);
+
   return (
-    <Wrapper>
+    <Wrapper className="filter-sort-pager">
       <FilterCategory />
       <Divider />
-      <SortWrapper>
+      <SortWrapper className="sort-buttons">
         <SortTitle color={styles.colors.neutrals.six}>Sort by:</SortTitle>
-        {sortButtons.map((button) => {
-          const isActive = activeSortButton === button.order;
-          return (
-            <StyledButton
-              key={button.order}
-              selected={isActive ? true : false}
-              onClick={() => setActiveSortButton(button.order)}
-            >
-              {button.order}
-            </StyledButton>
-          );
-        })}
+        <SortButtons className="sort-buttons__inner-wrapper">
+          {sortButtons.map((button) => {
+            const isActive = activeSortButton === button.order;
+            return (
+              <StyledButton
+                key={button.order}
+                selected={isActive ? true : false}
+                onClick={() => setActiveSortButton(button.order)}
+              >
+                {button.order}
+              </StyledButton>
+            );
+          })}
+        </SortButtons>
       </SortWrapper>
     </Wrapper>
   );
@@ -56,9 +72,14 @@ const Wrapper = styled.div`
 `;
 
 const SortWrapper = styled.div`
+  @media (max-width: 545px) {
+    width: auto;
+  }
+
   display: flex;
   align-items: center;
   margin-top: 24px;
+  width: max-content;
 
   ${breakpoints.tabletLandscape} {
     margin-top: 26.5px;
@@ -67,6 +88,11 @@ const SortWrapper = styled.div`
   ${breakpoints.desktopXL} {
     margin-top: 0;
   }
+`;
+
+const SortButtons = styled.div`
+  display: flex;
+  align-items: center;
 `;
 
 const SortTitle = styled(TextL1)`
