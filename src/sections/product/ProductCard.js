@@ -64,14 +64,18 @@ const ImgWrapper = styled.div`
   display: flex;
   justify-content: center;
   padding: 64px 28px 80px;
+  width: 100%;
 
   img {
-    height: 204px;
-    width: 280px;
+    width: 100%;
+  }
+
+  ${breakpoints.tabletPortrait} {
+    padding: 32px 24px 56px;
   }
 
   ${breakpoints.tabletLandscape} {
-    padding: 64px 16px;
+    padding: 42px 16px;
   }
 
   ${breakpoints.desktopXL} {

@@ -63,18 +63,19 @@ export const Walkthrough = () => {
 
 const Wrapper = styled.section`
   position: relative;
-  padding-left: 5.3%;
-  padding-right: 5.3%;
+  padding: 0 5.3%;
   margin-top: -24px;
 
+  ${breakpoints.tabletPortrait} {
+    padding: 0 21%;
+  }
+
   ${breakpoints.tabletLandscape} {
-    padding-left: 1.7%;
-    padding-right: 1.7%;
+    padding: 0 1.7%;
   }
 
   ${breakpoints.desktopXL} {
-    padding-left: 0;
-    padding-right: 0;
+    padding: 0;
     margin-top: 112px;
   }
 `;
@@ -86,6 +87,11 @@ const Background = styled.div`
   bottom: -2%;
   height: 132%;
   width: 100vw;
+
+  ${breakpoints.tabletPortrait} {
+    bottom: -4%;
+    height: 125%;
+  }
 
   ${breakpoints.tabletLandscape} {
     bottom: -6%;

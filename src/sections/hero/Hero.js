@@ -30,21 +30,22 @@ export const Hero = () => {
 
 const HeroWrapper = styled.header`
   margin-top: 168px;
-  padding-left: 5.3%;
-  padding-right: 5.3%;
+  padding: 0 5.3%;
   overflow-x: hidden;
 
+  ${breakpoints.tabletPortrait} {
+    padding: 0 12%;
+  }
+
   ${breakpoints.tabletLandscape} {
-    padding-left: 1.7%;
-    padding-right: 1.7%;
+    padding: 0 1.7%;
   }
 
   ${breakpoints.desktopXL} {
     display: flex;
     align-items: end;
     justify-content: space-between;
-    padding-left: 12%;
-    padding-right: 7.5%;
+    padding: 0 7.5% 0 12%;
     margin-top: 45px;
   }
 `;
@@ -74,6 +75,11 @@ const ImageWrapper = styled.div`
   img {
     max-width: 100%;
     height: 100%;
+  }
+
+  ${breakpoints.tabletPortrait} {
+    transform: unset;
+    width: 100%;
   }
 
   ${breakpoints.tabletLandscape} {

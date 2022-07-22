@@ -18,20 +18,27 @@ export const Product = () => {
 };
 
 const SectionWrapper = styled.section`
-  padding-left: 5.3%;
-  padding-right: 5.3%;
+  padding: 0 5.3%;
   margin-top: 80px;
   overflow-x: hidden;
 
+  ${breakpoints.tabletPortrait} {
+    margin-top: 24%;
+    padding: 0 12%;
+  }
+
   ${breakpoints.tabletLandscape} {
-    padding-left: 1.7%;
-    padding-right: 1.7%;
-    margin-top: 170px;
+    padding: 0 7%;
+    margin-top: 18%;
+  }
+
+  ${breakpoints.desktop} {
+    padding: 0 8%;
+    margin-top: 14%;
   }
 
   ${breakpoints.desktopXL} {
-    padding-left: 12%;
-    padding-right: 12%;
+    padding: 0 12%;
     margin-top: 160px;
   }
 `;

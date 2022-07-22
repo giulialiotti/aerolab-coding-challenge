@@ -11,5 +11,6 @@ export default createGlobalStyle`
   }
   body {
     overflow-x: hidden;
+    font-size: 10px;
   }
 `;

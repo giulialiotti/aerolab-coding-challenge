@@ -80,9 +80,10 @@ const Wrapper = styled.div`
 const SortTitle = styled(TextL1)`
   display: none;
 
-  ${breakpoints.desktopXL} {
+  ${breakpoints.desktop} {
     display: block;
     margin-right: 16px;
+    white-space: nowrap;
   }
 `;
 
@@ -101,6 +102,10 @@ const Filter = styled.button`
   line-height: 150%;
   color: ${styles.colors.neutrals.six};
   width: 100%;
+
+  ${breakpoints.tabletPortrait} {
+    width: 45%;
+  }
 
   ${breakpoints.tabletLandscape} {
     width: 256px;
@@ -124,9 +129,13 @@ const CategoriesList = styled.ul`
   list-style: none;
   position: absolute;
   top: 110%;
-  right: 0;
+  left: 0;
   width: 100%;
   z-index: 3;
+
+  ${breakpoints.tabletPortrait} {
+    width: 45%;
+  }
 
   ${breakpoints.tabletLandscape} {
     width: 256px;

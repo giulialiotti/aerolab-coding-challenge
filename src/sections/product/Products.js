@@ -29,8 +29,13 @@ const Wrapper = styled.div`
   grid-gap: 48px 0;
   margin-top: 64px;
 
+  ${breakpoints.tabletPortrait} {
+    grid-template-columns: repeat(2, 1fr);
+    grid-gap: 48px 24px;
+  }
+
   ${breakpoints.tabletLandscape} {
-    grid-template-columns: repeat(3, 1fr);
+    grid-template-columns: repeat(4, 1fr);
     grid-gap: 48px 24px;
   }
 

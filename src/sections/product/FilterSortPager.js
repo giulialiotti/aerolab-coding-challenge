@@ -64,7 +64,7 @@ const Wrapper = styled.div`
     margin-top: 42px;
   }
 
-  ${breakpoints.desktopXL} {
+  ${breakpoints.desktop} {
     display: flex;
     margin-top: 40px;
   }
@@ -84,7 +84,7 @@ const SortWrapper = styled.div`
     margin-top: 26.5px;
   }
 
-  ${breakpoints.desktopXL} {
+  ${breakpoints.desktop} {
     margin-top: 0;
   }
 `;
@@ -109,7 +109,7 @@ const StyledButton = styled(SelectorButton)`
 const Divider = styled.div`
   display: none;
 
-  ${breakpoints.desktopXL} {
+  ${breakpoints.desktop} {
     display: block;
     background-color: ${styles.colors.neutrals.three};
     margin: 0px 40px;

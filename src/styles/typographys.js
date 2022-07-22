@@ -12,6 +12,10 @@ const TitleL1 = styled.h1`
   text-transform: uppercase;
   color: ${props => props.color || styles.colors.neutrals.nine};
 
+  ${breakpoints.tabletPortrait} {
+    font-size: 106px;
+  }
+
   ${breakpoints.desktopXL} {
     font-size: 200px;
   } 
@@ -24,6 +28,10 @@ const TitleL2 = styled.h2`
   line-height: 80%;
   text-transform: uppercase;
   color: ${props => props.color || styles.colors.neutrals.nine};
+
+  ${breakpoints.tabletPortrait} {
+    font-size: 36px;
+  }
 
   ${breakpoints.desktopXL} {
     font-size: 48px;
