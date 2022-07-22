@@ -18,7 +18,7 @@ export const Hero = () => {
         </ImageWrapper>
         <IllustrationBG />
       </IllustrationWrapper>
-      <Waves>
+      <Waves className="waves-pattern">
         <img src={icons.wavePattern} alt="Wave pattern" />
         <img src={icons.wavePattern} alt="Wave pattern" />
         <img src={icons.wavePattern} alt="Wave pattern" />
@@ -109,12 +109,12 @@ const IllustrationBG = styled.div`
 const Waves = styled.div`
   overflow: hidden;
   position: absolute;
-  top: 9%;
+  top: -2rem;
   left: 0;
   width: 100%;
   z-index: -1;
 
-  img:nth-child(n+2) { 
+  img:nth-child(n + 2) {
     margin-top: -18px;
   }
 
@@ -123,7 +123,7 @@ const Waves = styled.div`
   }
 
   ${breakpoints.tabletLandscape} {
-    top: 9.8%;
+    top: -2rem;
 
     img {
       width: 100%;
@@ -139,7 +139,7 @@ const Waves = styled.div`
   }
 
   ${breakpoints.desktopXL} {
-    top: 14.5%;
+    top: -2rem;
 
     img:nth-child(4) {
       display: block;

@@ -51,6 +51,8 @@ const sortButtons = [
   },
 ];
 
+const allProducts = "All products";
+
 export {
   userUrl,
   addPointsUrl,
@@ -59,4 +61,5 @@ export {
   points,
   months,
   sortButtons,
+  allProducts
 };

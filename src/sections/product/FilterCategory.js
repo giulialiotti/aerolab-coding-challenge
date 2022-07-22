@@ -13,7 +13,7 @@ import { icons } from "assets";
 const { TextL1 } = typographys;
 
 export const FilterCategory = () => {
-  const { categories } = useProductsContext();
+  const { categories, activeFilter, setActiveFilter } = useProductsContext();
 
   const [showList, setShowList] = React.useState(false);
 
@@ -31,11 +31,16 @@ export const FilterCategory = () => {
     }
   };
 
+  const handleListItem = (category) => {
+    setActiveFilter(category);
+    handleOpenList();
+  };
+
   return (
     <Wrapper>
       <SortTitle color={styles.colors.neutrals.six}>Filter by:</SortTitle>
       <Filter onClick={handleOpenList}>
-        All products
+        {activeFilter}
         <ArrowIcon ref={arrowRef}>
           <img src={icons.arrowNextIcon} alt="Arrow down icon" />
         </ArrowIcon>
@@ -43,7 +48,14 @@ export const FilterCategory = () => {
       {showList && categories && (
         <CategoriesList>
           {categories.map((category) => {
-            return <CategoriesItem key={category}>{category}</CategoriesItem>;
+            return (
+              <CategoriesItem
+                key={category}
+                onClick={() => handleListItem(category)}
+              >
+                {category}
+              </CategoriesItem>
+            );
           })}
         </CategoriesList>
       )}

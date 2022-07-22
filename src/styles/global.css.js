@@ -9,4 +9,7 @@ export default createGlobalStyle`
     box-sizing: border-box;
     scroll-behavior: smooth;
   }
+  body {
+    overflow-x: hidden;
+  }
 `;

@@ -5,7 +5,6 @@ export const Main = ({ children }) => {
   return <Wrapper>{children}</Wrapper>;
 };
 
-const Wrapper = styled.div`
-  postion: relative;
-  overflow: hidden;
+const Wrapper = styled.main`
+  position: relative;
 `;
