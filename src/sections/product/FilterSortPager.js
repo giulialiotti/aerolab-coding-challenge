@@ -73,7 +73,7 @@ const Wrapper = styled.div`
 
 const SortWrapper = styled.div`
   @media (max-width: 545px) {
-    width: auto;
+    width: 100%;
   }
 
   display: flex;

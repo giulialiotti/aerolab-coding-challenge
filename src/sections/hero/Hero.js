@@ -32,6 +32,7 @@ const HeroWrapper = styled.header`
   margin-top: 168px;
   padding-left: 5.3%;
   padding-right: 5.3%;
+  overflow-x: hidden;
 
   ${breakpoints.tabletLandscape} {
     padding-left: 1.7%;
